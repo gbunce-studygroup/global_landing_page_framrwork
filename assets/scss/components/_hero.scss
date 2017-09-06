@@ -14,7 +14,7 @@
 	}
 	.hero_content{
 		text-align: center;
-
+		@include content_text_styles;
 		.button{
 			display: inline-block;
 			a{
