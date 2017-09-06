@@ -1,0 +1,32 @@
+/* BUTTON GROUP COMPONENT */
+.button-group{
+	@include component_margin;
+	ul{
+		padding: 0;
+		li{
+			display: inline-block;
+			margin: 0 5px;
+			a{
+				display: block;
+				@include secondary_cta;
+			}
+			&:last-child{
+				a{
+					@include primary_cta;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

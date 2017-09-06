@@ -1,0 +1,33 @@
+@import "variables_core"; // import core (global) variables
+@import "variables_brand"; // import brand specific variables
+@import "mixins";
+@import "font-awesome"; // _font-awesome.scss
+
+body{
+	color: $main_colour;
+}
+
+#pageBody{}
+
+header{
+	padding: $header_padding;
+}
+
+.section{
+	&.one{}
+	&.two{
+		background: #eee;
+	}
+	&.three{
+		background: #ccc;
+	}
+}
+
+footer{
+	padding: $footer_padding;
+}
+
+@import "family"; 					// _family.scss
+@import "animate"; 					// _animate.scss
+@import "components"; 				// Website Components
+@import "mediaqueries"; 			// Media queries

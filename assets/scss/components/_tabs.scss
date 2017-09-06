@@ -1,0 +1,59 @@
+/* TABS WIDGET COMPONENT */
+.tab_wrapper{
+	@include component_margin;
+	.nav-tabs{ // UL
+		border-bottom-width: 2px;
+		border-bottom-color: #000;
+		li{
+			h1, h2, h3, h4, h5, h6, p{
+				a{
+					padding: 10px 15px 7px 15px;
+					background: #fff;
+					color: #000;
+
+				}
+			}
+			&.active{
+				h1, h2, h3, h4, h5, h6, p{
+					a{
+						background: #000;
+						color: #fff;
+					}
+				}				
+			}
+		}
+	}
+	.tab-content{
+		.tab-pane{
+			@include content_text_styles;
+			&.active{}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+    /* TABS WIDGET COMPONENT */
+    .tab_wrapper{
+        .tab_ul_overflow{
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            .nav-tabs{ // UL
+                display: inline-block;
+                li{
+                    float: none;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

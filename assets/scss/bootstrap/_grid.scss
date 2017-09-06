@@ -1,0 +1,159 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed();
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row();
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+/*doc
+---
+title: Grid
+name: ab_grid
+category: Components
+---
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+      <h3 class="panel-title">
+      Usage Notes:
+      </h3>
+    </div>
+    <div class="panel-body">
+    Below are examples of the layouts available on all 'global website framework' sites. The title above each example refers to the name given to the layout in the sitecore components list. The class name inside each of the columns refers to the <a href="https://getbootstrap.com/examples/grid/" target="_blank">bootstrap class name</a>.
+    </div>
+</div>
+
+<div class="container-fluid grid_options">
+  <h4>Row 12</h4>
+  <div class="row show-grid">
+    <div class="col-md-12 s">.col-md-12</div>
+  </div>
+  <h4>Row 6 6</h4>
+  <div class="row show-grid">
+    <div class="col-md-6 s">.col-md-6</div>
+    <div class="col-md-6 s">.col-md-6</div>
+  </div>
+  <h4>Row 8 4</h4>
+  <div class="row show-grid">
+    <div class="col-md-8 s">.col-md-8</div>
+    <div class="col-md-4 s">.col-md-4</div>
+  </div>
+  <h4>Row 4 8</h4>
+  <div class="row show-grid">
+    <div class="col-md-4 s">.col-md-4</div>
+    <div class="col-md-8 s">.col-md-8</div>
+  </div>
+  <h4>Row 3 9</h4>
+  <div class="row show-grid">
+    <div class="col-md-3 s">.col-md-3</div>
+    <div class="col-md-9 s">.col-md-9</div>
+  </div>
+  <h4>Row 9 3</h4>
+  <div class="row show-grid">
+    <div class="col-md-9 s">.col-md-9</div>
+    <div class="col-md-3 s">.col-md-3</div>
+  </div>
+  <h4>Row 7 5</h4>
+  <div class="row show-grid">
+    <div class="col-md-7 s">.col-md-7</div>
+    <div class="col-md-5 s">.col-md-5</div>
+  </div>
+  <h4>Row 5 7</h4>
+  <div class="row show-grid">
+    <div class="col-md-5 s">.col-md-5</div>
+    <div class="col-md-7 s">.col-md-7</div>
+  </div>
+  <h4>Row 4 4 4</h4>
+  <div class="row show-grid">
+    <div class="col-md-4 s">.col-md-4</div>
+    <div class="col-md-4 s">.col-md-4</div>
+    <div class="col-md-4 s">.col-md-4</div>
+  </div>
+  <h4>Row 3 3 3 3</h4>
+  <div class="row show-grid">
+    <div class="col-md-3 s">.col-md-3</div>
+    <div class="col-md-3 s">.col-md-3</div>
+    <div class="col-md-3 s">.col-md-3</div>
+    <div class="col-md-3 s">.col-md-3</div>
+  </div>
+</div>
+<hr>
+*/

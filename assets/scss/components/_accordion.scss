@@ -1,0 +1,68 @@
+/* ACCORDION COMPONENT */
+.accordion{
+    @include component_margin;
+    .panel-group{
+        margin-bottom: 0;
+        .panel{
+            box-shadow: none;
+            h1, h2, h3, h4, h5, h6{}
+            .panel-heading{
+                padding: 0;
+                border-radius: $accordion_border_radius;
+                border-width: $accordion_border_width;
+                border-color: $accordion_border_colour;
+                border-style: solid;
+                .panel-title{
+                    h1, h2, h3, h4, h5, h6{
+                        margin: 0;
+                        a{
+                            display: block;
+                            padding: 15px 40px 15px 15px;
+                            position: relative;
+                            color: $accordion_text_colour_open;
+                            background: $accordion_background_colour_open;
+                            &:hover, &:active, &:focus{
+                                text-decoration: none;
+                            }
+                            &:active, &:focus{
+                                outline: 0;
+                            }
+                            &:after{
+                                @include fa-icon;
+                                content: "\f068"; // Font Awesome close icon http://fontawesome.io/cheatsheet/
+                                position: absolute;
+                                top: 50%;
+                                right: 15px;
+                                transform: translateY(-50%);
+                                color: $accordion_icon_colour_open;
+                            }
+                            &.collapsed{
+                                background: $accordion_background_colour;
+                                color: $accordion_text_colour;
+                                &:after{
+                                    content: "\f067"; // Font Awesome open icon http://fontawesome.io/cheatsheet/
+                                    color: $accordion_icon_colour;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .panel-body{
+                @include content_text_styles;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

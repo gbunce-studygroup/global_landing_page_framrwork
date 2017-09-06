@@ -1,0 +1,160 @@
+// Own Variables
+$main_colour:            #000 !default; // Use this for ting like main body text colour
+
+// form colours
+$form_colour:            #000 !default; // This should be a medium/darker brand colour
+$form_colour_s:          #eeeeee !default; // _s stands for secondary. This should be a lighter brand colour
+
+
+// ************************************** LANDING PAGE VARIABLES START ************************************** //
+
+
+// HEADER
+$header_background_colour:               #fff !default;
+$header_padding:						 30px 0;
+// Header Language select
+$header_language_select_text_colour:     #000 !default;
+$header_language_select_font_size:       12px !default;
+
+
+// FOOTER
+$footer_background_colour:               #fff !default;
+$footer_padding:               			 30px 0 !default;
+// Footer links
+$footer_links_colour:                    #000 !default;
+$footer_links_text_decoration:           none !default;
+// Footer links hover
+$footer_links_colour_hover:              #000 !default;
+$footer_links_text_decoration_hover:     underline !default;
+
+
+// SOCIAL MEDIA
+// Social media title
+$social_media_title_size:				 14px !default;
+$social_media_title_colour:		         #000 !default;
+// Social media icons
+$space_between_icons:					 15px !default;
+$icon_size:								 30px !default;
+$icon_colour:							 #000 !default;
+// Social media icons hover, active, focus
+$icon_colour_hover:						 #000 !default;
+$icon_opacity_hover:					 0.8 !default;
+// Footer maintained by SG
+$footer_maintained_by_colour:            #000 !default;
+
+
+// ************************************** CTA VARIABLES ************************************** //
+
+// Global CTA padding
+$cta_padding:                   		 10px 20px !default; 
+
+// Primary CTA (last child in button group)
+$cta_primary_background_colour:          #000 !default; 
+$cta_primary_text_colour:                #fff !default;
+$cta_primary_border_width:               2px !default;
+$cta_primary_border_colour:              #000 !default;
+$cta_primary_border_radius:              5px !default;
+// Primary CTA hover, active, focus
+$cta_primary_background_colour_hover:    #fff !default;
+$cta_primary_text_colour_hover:          #000 !default;
+$cta_primary_border_colour_hover:        #000 !default;
+
+
+// Secondary CTA (widget & form buttons)
+$cta_secondary_background_colour:        none !default; 
+$cta_secondary_text_colour:				 #000 !default;
+$cta_secondary_border_width:			 2px !default;
+$cta_secondary_border_colour:			 #000 !default;
+$cta_secondary_border_radius:			 5px !default;
+// Secondary CTA hover, active, focus
+$cta_secondary_background_colour_hover:	 #000 !default;
+$cta_secondary_text_colour_hover:		 #fff !default;
+$cta_secondary_border_colour_hover:		 #000 !default;
+
+
+// ************************************** COMPONENT VARIABLES ************************************** //
+
+
+// Set margin for all components
+$component_margin:						 0 0 30px 0 !default;
+
+// Content box / Accordion content / tab content
+$h1_size:                                36px !default;
+$h1_line_height:                         46px !default;
+$h1_colour:                              #000 !default;
+
+$h2_size:                                30px !default;
+$h2_line_height:                         40px !default;
+$h2_colour:                              #000 !default;
+
+$h3_size:                                24px !default;
+$h3_line_height:                         34px !default;
+$h3_colour:                              #000 !default;
+
+$h4_size:                                18px !default;
+$h4_line_height:                         28px !default;
+$h4_colour:                              #000 !default;
+
+$h5_size:                                14px !default;
+$h5_line_height:                         24px !default;
+$h5_colour:                              #000 !default;
+
+$h6_size:                                12px !default;
+$h6_line_height:                         22px !default;
+$h6_colour:                              #000 !default;
+
+$p_ul_ol_size:							 14px !default;
+$p_ul_ol_line_height:					 24px !default;
+$p_ul_ol_colour:						 $main_colour !default;
+
+$a_colour:								 #000 !default;
+$a_text_decoration:						 none !default;
+$a_colour_hover:						 #000 !default;
+$a_text_decoration_hover:				 underline !default;
+
+
+// Accordion
+$accordion_text_colour:                  #fff !default; 
+$accordion_icon_colour:                  $accordion_text_colour !default; 
+$accordion_background_colour:            #000 !default;
+$accordion_border_radius:                0 0 0 0 !default; 
+$accordion_border_width:                 2px !default;
+$accordion_border_colour:                #000 !default;
+// Accordion open
+$accordion_background_colour_open:       #fff !default;
+$accordion_text_colour_open:             #000 !default; 
+$accordion_icon_colour_open:             $accordion_text_colour_open !default; 
+
+
+// Carousel
+$carousel_caption_background_colour:     		#000 !default;
+$carousel_text_size:                     		14px !default;
+$carousel_text_colour:                   		#fff !default;
+// Carousel indicators
+$carousel_indicators_colour:             		none !default;
+$carousel_indicators_border_width:       		2px !default;
+$carousel_indicators_border_colour:      		#fff !default;
+// Carousel indicators active
+$carousel_indicators_colour_active:      		#fff !default;
+$carousel_indicators_border_colour_active:      #fff !default;
+
+// Form
+
+// Gallery
+
+// Hero image
+
+// Logo
+$logo_margin:                            0 0 0 0 !default;
+
+// Map
+
+// Tabs
+
+// Testimonial
+
+// Video
+
+// Widget
+
+// ************************************** LANDING PAGE VARIABLES END ************************************** //
