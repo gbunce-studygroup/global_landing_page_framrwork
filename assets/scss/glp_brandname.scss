@@ -11,20 +11,40 @@ body{
 
 header{
 	padding: $header_padding;
+	background: $header_background_colour;
+	.col-md-6{
+		&.affix{
+			background: $sticky_header_background_colour;
+			box-shadow: $sticky_header_shadow;
+			@include animate (slideInDown);
+			z-index: 16;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			.language_links_v2{
+				display: none;
+			}
+		}
+	}
 }
 
 .section{
-	&.one{}
+	padding: $section_padding;
+	&.one{
+		background: $section_one_background_colour;
+	}
 	&.two{
-		background: #eee;
+		background: $section_two_background_colour;
 	}
 	&.three{
-		background: #ccc;
+		background: $section_three_background_colour;
 	}
 }
 
 footer{
 	padding: $footer_padding;
+	background: $footer_background_colour;
 }
 
 @import "family"; 					// _family.scss

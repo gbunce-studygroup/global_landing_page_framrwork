@@ -3,8 +3,10 @@
 	@include component_margin;
 	padding: 0;
 	position: relative;
+	text-align: $video_text_align;
 	h1, h2, h3, h4, h5, h6{
-		&:first-child{}
+		font-size: $component_title_size;
+		margin: 0 0 10px 0;
 	}
 	a{
 		img{
@@ -29,8 +31,8 @@
 /* VIDEO LIGHTBOX */
 /* VIDEO LIGHTBOX */
 .modal-backdrop{
-	background: #fff;
-	opacity: 0.9 !important;
+	background: $modal_background_colour;
+	opacity: $modal_background_opacity !important;
 }
 .modal{
 	.modal-dialog{
@@ -45,19 +47,21 @@
 				padding: 0 0 15px 0;
 				.close{
 					text-shadow: none;
-					color: $main_colour;
+					color: $modal_close_colour;
 					opacity: 1;
-					border: 2px solid $main_colour;
+					border-style: solid;
+					border-color: $modal_close_border_colour;
+					border-radius: $modal_close_border_radius;
+					border-width: $modal_close_border_width;
 					padding: 2px 8px 7px 8px;
-					border-radius: 20px;
 					@include app-transition(all, .4s, ease);
-					&:hover{
-						color: $a_colour;
-						border-color: $a_colour;
+					&:hover, &:focus, &:active{
+						color: $modal_close_colour_hover;
+						border-color: $modal_close_border_colour_hover;
 					}
 				}
 				.modal-title{
-					color: $main_colour;
+					color: $modal_title_colour;
 				}
 			}
 			.modal-body{

@@ -5,7 +5,10 @@
         margin-bottom: 0;
         .panel{
             box-shadow: none;
-            h1, h2, h3, h4, h5, h6{}
+            h1, h2, h3, h4, h5, h6{
+                font-size: $component_title_size;
+                margin: 0 0 10px 0;
+            }
             .panel-heading{
                 padding: 0;
                 border-radius: $accordion_border_radius;
@@ -15,6 +18,9 @@
                 .panel-title{
                     h1, h2, h3, h4, h5, h6{
                         margin: 0;
+                        text-align: left;
+                        font-size: $h4_size;
+                        line-height: $h4_line_height;
                         a{
                             display: block;
                             padding: 15px 40px 15px 15px;

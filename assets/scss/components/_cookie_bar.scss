@@ -41,12 +41,12 @@
 		.col-b{ //col-md-2
 			width: 16.6667%;
 			float: left;
+			text-align: right;
 			a.cookie-btn{
-				background: $form_colour;
-				color: #fff;
-				padding: 6px 10px 8px;
-				display: inline-block;
-				span{}
+				@include secondary_cta;
+				padding: 5px 10px;
+				text-align: center;
+				font-size: 12px;
 			}
 		}
 	}
@@ -71,6 +71,7 @@
 			.col-a, .col-b{
 				float: none;
 				width: 100%;
+				text-align: center;
 			}
 			.col-b{ //col-md-2
 				a.cookie-btn{

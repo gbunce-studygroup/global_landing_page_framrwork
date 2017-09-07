@@ -1,14 +1,18 @@
 /* WIDGET COMPONENT */
 .widget{
 	@include component_margin;
+	@include content_text_styles;
+	background: $widget_background;
+	padding: $widget_padding;
+	text-align: $widget_text_align;
 	h1, h2, h3, h4, h5, h6{
-		&:first-child{
-			margin-top: 0;
-		}
+		margin: 0 0 10px 0; 
+		font-size: $component_title_size;
 	}
 	img{
 		width: 100%;
 		height: auto;
+		margin: $widget_image_margin;
 	}
 	.button{
 		a{

@@ -112,7 +112,7 @@
 			}
 		}
 		button{
-			@include form_button;
+			@include form_cta;
 		}
 	}
 	#download-links, .brochure-link-fields{ // brochure download item styles

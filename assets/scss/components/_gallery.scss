@@ -1,21 +1,18 @@
 /* GALLERY COMPONENT */
 .gallery{
 	@include component_margin;
-	//padding: 0 15px;
-	.col-md-6, .col-sm-6, .col-xs-6{
-		padding: 0;
-	}
+	padding: $gallery_space_left_and_right;
 	h1, h2, h3, h4, h5, h6{
+		margin-left: 0;
+		font-size: $component_title_size;
 	}
-
-
 	.row{
 		&:after{
 			clear: none !important;
 		}
 		.col-md-6, .col-sm-6, .col-xs-6{
 			width: 33.33%;
-			padding: 15px;
+			padding: $gallery_space_between_images;
 			a{
 				position: relative;
 				display: block;
@@ -27,10 +24,10 @@
 				}
 				&:after{
 					@include fa-icon;
-					content: "\f00e";
+					content: $gallery_icon;
 					position: absolute;
 					z-index: 0;
-					color: #fff;
+					color: $gallery_icon_colour;
 					display: block;
 					top: 0;
 					bottom: 0;
@@ -39,14 +36,14 @@
 					text-align: center;
 					padding-top: 35%;
   					@include app-transition(all, .4s, ease);
-					background: rgba(0, 0, 0, 0.2);
+					background: $gallery_image_overlay;
 					font-size: 30px;
 					line-height: 0;
 					pointer-events: none;
 				}
 				&:hover{
 					&:after{
-						background: rgba(0, 0, 0, 0.1);
+						background: $gallery_image_overlay_hover;
 					}
 				}
 			}
@@ -65,10 +62,6 @@
 			}
 		}
 	}
-
-
-
-
 	/* GALLERY LIGHTBOX */
 	.modal{
 		margin-top: 5vh;
@@ -87,17 +80,47 @@
 								}
 								&.active{}
 								.carousel-caption{
+									position: absolute;
+									background: none;
+									bottom: 20px;
 									left: 25%;
 									right: 25%;
 									h1, h2, h3, h4, h5, h6{
 										margin: 0;
 									}
-									p{
+									h1{
+										font-size: $h1_size;
+										line-height: $h1_line_height;
+									}
+									h2{
+										font-size: $h2_size;
+										line-height: $h2_line_height;
+									}
+									h3{
+										font-size: $h3_size;
+										line-height: $h3_line_height;
+									}
+									h4{
+										font-size: $h4_size;
+										line-height: $h4_line_height;
+									}
+									h5{
+										font-size: $h5_size;
+										line-height: $h5_line_height;
+									}
+									h6{
+										font-size: $h6_size;
+										line-height: $h6_line_height;
+									}
+									p, ul, ol{
+										font-size: $p_ul_ol_size;
+										line-height: $p_ul_ol_line_height;
 									}
 								}
 							}
 						}
 						.carousel-control{
+							display: block;
 							background: none;
 							opacity: 1;
 							top: 50%;
@@ -105,7 +128,7 @@
 							i{
 								font-size: 60px;
 								text-shadow: none;
-								color: $main_colour;
+								color: $gallery_carousel_arrow_colour;
 								position: relative;
 								top: 50%;
 								transform: translateY(-50%);
@@ -113,7 +136,7 @@
 							}
 							&:hover{
 								i{
-									color: $a_colour;
+									color: $gallery_carousel_arrow_colour_hover;
 								}
 							}
 						}
@@ -122,9 +145,6 @@
 			}
 		}
 	}
-
-
-
 }
 
 @media (min-width: $screen-lg-min){

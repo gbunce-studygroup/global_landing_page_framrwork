@@ -1,7 +1,8 @@
 /* LANGUAGE LINKS COMPONENT */
 .language_links_v2{ //ul
-	margin: 0;
-	padding: 0;
+	@include component_margin;
+	padding: 0 10px 0 0;
+	text-align: $language_select_float;
 	li{ //.dropdown
 		list-style-type: none;
 		a{
@@ -19,6 +20,8 @@
 		}
 		ul{ //.dropdown-menu
 			display: none;
+			left: auto;
+			right: 0;
 		}
 	}
 }
