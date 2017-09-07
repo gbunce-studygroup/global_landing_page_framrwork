@@ -2127,3 +2127,25 @@ $(".modal").on('hidden.bs.modal', function (e) {
 
 // CLEARS THE GALLERY & TESTIMONIAL WHEN ITS IN A 8 OR 12 COLUMN GRID
 $( ".col-md-12 .gallery, .col-md-8 .gallery, .col-md-12 .testimonial" ).append( "<div class='clearfix'/></div>" );
+
+// STICKY NAV AFTER 300PX
+$(window).scroll(function(){
+	var set_affix = '300';
+	if ($(this).scrollTop() > set_affix){  
+		$("header .container .row. .col-md-6:last-child").addClass("affix");
+	}
+	else{
+		$("header .container .row. .col-md-6:last-child").removeClass("affix");
+	}
+});
+
+// REMOVE PADDING FROM SECTIONS IF NO COMOPNENTS OR ROWS ARE IN IT
+$('.section.one > .container').each(function(){
+    if($.trim($(this).html()) == '') $('.section.one').css('padding','0');
+});
+$('.section.two > .container').each(function(){
+    if($.trim($(this).html()) == '') $('.section.two').css('padding','0');
+});
+$('.section.three > .container').each(function(){
+    if($.trim($(this).html()) == '') $('.section.three').css('padding','0');
+});

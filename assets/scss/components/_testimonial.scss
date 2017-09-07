@@ -1,22 +1,26 @@
 /* TESTIMONIAL COMPONENT */
 .testimonial{
 	@include component_margin;
+	background: $testimonial_background;
+	padding: $testimonial_padding;
+	text-align: $testimonial_text_align;
 	h1, h2, h3, h4, h5, h6{
-		&:first-child{}
+		&:first-child{
+			margin: 0 0 10px 0;
+			font-size: $component_title_size;
+		}
 	}
 	img{
 		width: 100%;
 		height: auto;
+		margin: $testimonial_image_margin;
 	}
-	.testimonial_content{
-		p{}
-	}
+	.testimonial_content,
 	.testimonial_info{
-		p{
-			em{}
-		}
+		@include content_text_styles;
 	}
 	.col-md-12 &{
+		text-align: left;
 		img{
 			width: 300px;
 			height: auto;

@@ -1,12 +1,24 @@
 /* MAP COMPONENT */
 .map{
 	@include component_margin;
+	background: $map_background;
+	padding: $map_padding;
+	text-align: $map_text_align;
 	h1, h2, h3, h4, h5, h6{
-		&:first-child{}
+		font-size: $component_title_size;
+		margin: 0 0 10px 0;
 	}
 	iframe{}
-	p{}
+	p{
+		text-align: left;
+	}
 }
+
+
+
+
+
+
 
 @media (min-width: $screen-lg-min){
 }

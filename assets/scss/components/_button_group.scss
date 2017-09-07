@@ -1,6 +1,7 @@
 /* BUTTON GROUP COMPONENT */
 .button-group{
-	@include component_margin;
+	margin: $button_group_margin;
+	text-align: $button_group_float;
 	ul{
 		padding: 0;
 		li{
@@ -16,6 +17,10 @@
 				}
 			}
 		}
+	}
+	.affix &{
+		text-align: center;
+		margin: 10px 0;
 	}
 }
 

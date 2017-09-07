@@ -1,5 +1,6 @@
 /* FOOTER LINKS */
 .footer_links{ //ul
+	@include component_margin;
 	padding: 0;
 	li{
 		display: inline-block;

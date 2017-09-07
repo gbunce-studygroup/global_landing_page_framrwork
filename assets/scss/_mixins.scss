@@ -40,7 +40,9 @@ $animate-scss-speed: 1s !default;
 @mixin cta_shared_styles{
     border-style: solid;
     display: inline-block;
+    text-align: center;
     padding: $cta_padding;
+    @include app-transition(all, .4s, ease);
 }
 
 // Primary CTA
@@ -77,8 +79,8 @@ $animate-scss-speed: 1s !default;
     }
 }
 
-// FORM BUTTON STYLES
-@mixin form_button{
+// Form CTA
+@mixin form_cta{
     @include primary_cta;
     &:after{
         font-family: 'Glyphicons Halflings';
@@ -101,7 +103,8 @@ $animate-scss-speed: 1s !default;
 
 // CONTENT BOX, TABS, ACCORDION & BLOG ARTICLE TEXT STYLES
 @mixin content_text_styles{
-    h1, h2, h3, h4, h5, h6{}
+
+    h1, h2, h3, h4, h5, h6, p{}
 
     h1{
         font-size: $h1_size;
