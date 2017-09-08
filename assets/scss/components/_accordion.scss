@@ -7,23 +7,23 @@
             box-shadow: none;
             h1, h2, h3, h4, h5, h6{
                 font-size: $component_title_size;
+                text-align: $accordion_title_text_align;
                 margin: 0 0 10px 0;
             }
             .panel-heading{
                 padding: 0;
+                border: none;
                 border-radius: $accordion_border_radius;
-                border-width: $accordion_border_width;
-                border-color: $accordion_border_colour;
-                border-style: solid;
+                #{$accordion_border_direction}: $accordion_border_width solid $accordion_border_colour;
                 .panel-title{
                     h1, h2, h3, h4, h5, h6{
                         margin: 0;
                         text-align: left;
-                        font-size: $h4_size;
+                        font-size: $accordion_text_and_icon_size;
                         line-height: $h4_line_height;
                         a{
                             display: block;
-                            padding: 15px 40px 15px 15px;
+                            padding: $accordion_padding;
                             position: relative;
                             color: $accordion_text_colour_open;
                             background: $accordion_background_colour_open;
@@ -55,7 +55,14 @@
                 }
             }
             .panel-body{
+                border: none;
+                padding: $accordion_content_padding;
+                border-bottom: $accordion_border_width solid $accordion_border_colour;
+                background: $accordion_content_background;
                 @include content_text_styles;
+                h1, h2, h3, h4, h5, h6{
+                    text-align: left;
+                }
             }
         }
     }

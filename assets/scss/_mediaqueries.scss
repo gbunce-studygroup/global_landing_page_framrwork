@@ -8,6 +8,20 @@
 }
 
 @media (max-width: $screen-sm-max){
+	header{
+		padding: (nth($header_padding, 1) / 1.5);
+		.row{
+			position: relative;
+		}
+		.col-md-6{
+			&:last-child{
+				position: initial;
+			}
+			&.affix{
+				position: fixed;
+			}
+		}
+	}
 }
 
 @media (max-width: $screen-xs-max){

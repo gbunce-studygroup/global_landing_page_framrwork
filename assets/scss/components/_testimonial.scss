@@ -15,7 +15,11 @@
 		height: auto;
 		margin: $testimonial_image_margin;
 	}
-	.testimonial_content,
+	.testimonial_content{
+		color: $testimonial_text_colour;
+		font-size: $testimonial_text_size;
+		line-height: $testimonial_text_light_height;
+	}
 	.testimonial_info{
 		@include content_text_styles;
 	}

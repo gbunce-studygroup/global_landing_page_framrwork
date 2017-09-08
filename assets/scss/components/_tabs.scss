@@ -2,22 +2,29 @@
 .tab_wrapper{
 	@include component_margin;
 	.nav-tabs{ // UL
-		border-bottom-width: 2px;
-		border-bottom-color: #000;
+		border-bottom: $tab_border_width solid $tab_border_colour;
 		li{
 			h1, h2, h3, h4, h5, h6, p{
 				a{
-					padding: 10px 15px 8px 15px;
-					background: #fff;
-					color: #000;
-
+					padding: $tab_nav_padding;
+					background: $tab_nav_background;
+					color: $tab_nav_text_colour;
+					font-size: $tab_nav_font_size;
+					&:hover, &:active, &:focus{
+						outline: 0;
+						text-decoration: $tab_nav_text_decoration;
+						color: $tab_nav_text_colour_hover;
+					}
 				}
 			}
 			&.active{
 				h1, h2, h3, h4, h5, h6, p{
 					a{
-						background: #000;
-						color: #fff;
+						background: $tab_nav_background_active;
+						color: $tab_nav_text_colour_active;
+						&:hover, &:active, &:focus{
+							text-decoration: none;
+						}
 					}
 				}				
 			}
@@ -25,11 +32,15 @@
 	}
 	.tab-content{
 		.tab-pane{
+			padding: $tab_content_padding;
+			border-bottom: $tab_border_width solid $tab_border_colour;
+			background: $tab_content_background;
 			@include content_text_styles;
 			&.active{}
 		}
 	}
 }
+
 
 @media (min-width: $screen-lg-min){
 }

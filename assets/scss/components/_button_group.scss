@@ -3,6 +3,7 @@
 	margin: $button_group_margin;
 	text-align: $button_group_float;
 	ul{
+		margin: 0;
 		padding: 0;
 		li{
 			display: inline-block;
@@ -31,6 +32,9 @@
 }
 
 @media (max-width: $screen-sm-max){
+	.button-group{
+		text-align: center;
+	}
 }
 
 @media (max-width: $screen-xs-max){

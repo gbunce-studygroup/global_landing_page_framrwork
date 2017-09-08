@@ -2870,8 +2870,6 @@ header {
   background: #eee;
 }
 header .col-md-6.affix {
-  background: #eee;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08);
   -webkit-animation-name: slideInDown;
   -moz-animation-name: slideInDown;
   -o-animation-name: slideInDown;
@@ -2884,18 +2882,12 @@ header .col-md-6.affix {
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
-  z-index: 16;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-header .col-md-6.affix .language_links_v2 {
-  display: none;
+  background: #eee;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08);
 }
 
 .section {
-  padding: 30px 0;
+  padding: 30px 0 0 0;
 }
 .section.one {
   background: #fff;
@@ -2967,24 +2959,24 @@ footer {
 }
 .accordion .panel-group .panel h1, .accordion .panel-group .panel h2, .accordion .panel-group .panel h3, .accordion .panel-group .panel h4, .accordion .panel-group .panel h5, .accordion .panel-group .panel h6 {
   font-size: 25px;
+  text-align: center;
   margin: 0 0 10px 0;
 }
 .accordion .panel-group .panel .panel-heading {
   padding: 0;
+  border: none;
   border-radius: 0 0 0 0;
-  border-width: 2px;
-  border-color: #000;
-  border-style: solid;
+  border: 2px solid #000;
 }
 .accordion .panel-group .panel .panel-heading .panel-title h1, .accordion .panel-group .panel .panel-heading .panel-title h2, .accordion .panel-group .panel .panel-heading .panel-title h3, .accordion .panel-group .panel .panel-heading .panel-title h4, .accordion .panel-group .panel .panel-heading .panel-title h5, .accordion .panel-group .panel .panel-heading .panel-title h6 {
   margin: 0;
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
 }
 .accordion .panel-group .panel .panel-heading .panel-title h1 a, .accordion .panel-group .panel .panel-heading .panel-title h2 a, .accordion .panel-group .panel .panel-heading .panel-title h3 a, .accordion .panel-group .panel .panel-heading .panel-title h4 a, .accordion .panel-group .panel .panel-heading .panel-title h5 a, .accordion .panel-group .panel .panel-heading .panel-title h6 a {
   display: block;
-  padding: 15px 40px 15px 15px;
+  padding: 10px 40px 10px 10px;
   position: relative;
   color: #000;
   background: #fff;
@@ -3016,6 +3008,12 @@ footer {
 .accordion .panel-group .panel .panel-heading .panel-title h1 a.collapsed:after, .accordion .panel-group .panel .panel-heading .panel-title h2 a.collapsed:after, .accordion .panel-group .panel .panel-heading .panel-title h3 a.collapsed:after, .accordion .panel-group .panel .panel-heading .panel-title h4 a.collapsed:after, .accordion .panel-group .panel .panel-heading .panel-title h5 a.collapsed:after, .accordion .panel-group .panel .panel-heading .panel-title h6 a.collapsed:after {
   content: "\f067";
   color: #fff;
+}
+.accordion .panel-group .panel .panel-body {
+  border: none;
+  padding: 20px 15px 10px 15px;
+  border-bottom: 2px solid #000;
+  background: #eee;
 }
 .accordion .panel-group .panel .panel-body h1 {
   font-size: 36px;
@@ -3081,6 +3079,9 @@ footer {
   width: 100%;
   overflow-x: scroll;
 }
+.accordion .panel-group .panel .panel-body h1, .accordion .panel-group .panel .panel-body h2, .accordion .panel-group .panel .panel-body h3, .accordion .panel-group .panel .panel-body h4, .accordion .panel-group .panel .panel-body h5, .accordion .panel-group .panel .panel-body h6 {
+  text-align: left;
+}
 
 /* BUTTON GROUP COMPONENT */
 .button-group {
@@ -3088,6 +3089,7 @@ footer {
   text-align: right;
 }
 .button-group ul {
+  margin: 0;
   padding: 0;
 }
 .button-group ul li {
@@ -3146,6 +3148,11 @@ footer {
   margin: 10px 0;
 }
 
+@media (max-width: 991px) {
+  .button-group {
+    text-align: center;
+  }
+}
 /* CAROUSEL COMPONENT */
 .carousel {
   margin: 0 0 30px 0;
@@ -3686,6 +3693,7 @@ label[for="date_picker"] span {
   /* GALLERY LIGHTBOX */
 }
 .gallery h1, .gallery h2, .gallery h3, .gallery h4, .gallery h5, .gallery h6 {
+  margin-top: 0;
   margin-left: 0;
   font-size: 25px;
 }
@@ -4025,7 +4033,24 @@ label[for="date_picker"] span {
   right: 0;
 }
 
+@media (max-width: 991px) {
+  .language_links_v2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
 /* MAIN LOGO COMPONENT */
+.logo {
+  margin: 0 0 0 0;
+}
+
+@media (max-width: 991px) {
+  .logo {
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+}
 /* MAP COMPONENT */
 .map {
   margin: 0 0 30px 0;
@@ -4073,17 +4098,30 @@ label[for="date_picker"] span {
   margin: 0 0 30px 0;
 }
 .tab_wrapper .nav-tabs {
-  border-bottom-width: 2px;
-  border-bottom-color: #000;
+  border-bottom: 2px solid #000;
 }
 .tab_wrapper .nav-tabs li h1 a, .tab_wrapper .nav-tabs li h2 a, .tab_wrapper .nav-tabs li h3 a, .tab_wrapper .nav-tabs li h4 a, .tab_wrapper .nav-tabs li h5 a, .tab_wrapper .nav-tabs li h6 a, .tab_wrapper .nav-tabs li p a {
   padding: 10px 15px 8px 15px;
-  background: #fff;
+  background: none;
+  color: #000;
+  font-size: 20px;
+}
+.tab_wrapper .nav-tabs li h1 a:hover, .tab_wrapper .nav-tabs li h1 a:active, .tab_wrapper .nav-tabs li h1 a:focus, .tab_wrapper .nav-tabs li h2 a:hover, .tab_wrapper .nav-tabs li h2 a:active, .tab_wrapper .nav-tabs li h2 a:focus, .tab_wrapper .nav-tabs li h3 a:hover, .tab_wrapper .nav-tabs li h3 a:active, .tab_wrapper .nav-tabs li h3 a:focus, .tab_wrapper .nav-tabs li h4 a:hover, .tab_wrapper .nav-tabs li h4 a:active, .tab_wrapper .nav-tabs li h4 a:focus, .tab_wrapper .nav-tabs li h5 a:hover, .tab_wrapper .nav-tabs li h5 a:active, .tab_wrapper .nav-tabs li h5 a:focus, .tab_wrapper .nav-tabs li h6 a:hover, .tab_wrapper .nav-tabs li h6 a:active, .tab_wrapper .nav-tabs li h6 a:focus, .tab_wrapper .nav-tabs li p a:hover, .tab_wrapper .nav-tabs li p a:active, .tab_wrapper .nav-tabs li p a:focus {
+  outline: 0;
+  text-decoration: underline;
   color: #000;
 }
 .tab_wrapper .nav-tabs li.active h1 a, .tab_wrapper .nav-tabs li.active h2 a, .tab_wrapper .nav-tabs li.active h3 a, .tab_wrapper .nav-tabs li.active h4 a, .tab_wrapper .nav-tabs li.active h5 a, .tab_wrapper .nav-tabs li.active h6 a, .tab_wrapper .nav-tabs li.active p a {
   background: #000;
   color: #fff;
+}
+.tab_wrapper .nav-tabs li.active h1 a:hover, .tab_wrapper .nav-tabs li.active h1 a:active, .tab_wrapper .nav-tabs li.active h1 a:focus, .tab_wrapper .nav-tabs li.active h2 a:hover, .tab_wrapper .nav-tabs li.active h2 a:active, .tab_wrapper .nav-tabs li.active h2 a:focus, .tab_wrapper .nav-tabs li.active h3 a:hover, .tab_wrapper .nav-tabs li.active h3 a:active, .tab_wrapper .nav-tabs li.active h3 a:focus, .tab_wrapper .nav-tabs li.active h4 a:hover, .tab_wrapper .nav-tabs li.active h4 a:active, .tab_wrapper .nav-tabs li.active h4 a:focus, .tab_wrapper .nav-tabs li.active h5 a:hover, .tab_wrapper .nav-tabs li.active h5 a:active, .tab_wrapper .nav-tabs li.active h5 a:focus, .tab_wrapper .nav-tabs li.active h6 a:hover, .tab_wrapper .nav-tabs li.active h6 a:active, .tab_wrapper .nav-tabs li.active h6 a:focus, .tab_wrapper .nav-tabs li.active p a:hover, .tab_wrapper .nav-tabs li.active p a:active, .tab_wrapper .nav-tabs li.active p a:focus {
+  text-decoration: none;
+}
+.tab_wrapper .tab-content .tab-pane {
+  padding: 20px 15px 10px 15px;
+  border-bottom: 2px solid #000;
+  background: #eee;
 }
 .tab_wrapper .tab-content .tab-pane h1 {
   font-size: 36px;
@@ -4169,7 +4207,7 @@ label[for="date_picker"] span {
 .testimonial {
   margin: 0 0 30px 0;
   background: #fff;
-  padding: 20px 10px;
+  padding: 10px;
   text-align: center;
 }
 .testimonial h1:first-child, .testimonial h2:first-child, .testimonial h3:first-child, .testimonial h4:first-child, .testimonial h5:first-child, .testimonial h6:first-child {
@@ -4181,85 +4219,71 @@ label[for="date_picker"] span {
   height: auto;
   margin: 0 0 20px 0;
 }
-.testimonial .testimonial_content h1,
+.testimonial .testimonial_content {
+  color: #000;
+  font-size: 20px;
+  line-height: 30px;
+}
 .testimonial .testimonial_info h1 {
   font-size: 36px;
   line-height: 46px;
   color: #000;
 }
-.testimonial .testimonial_content h2,
 .testimonial .testimonial_info h2 {
   font-size: 30px;
   line-height: 40px;
   color: #000;
 }
-.testimonial .testimonial_content h3,
 .testimonial .testimonial_info h3 {
   font-size: 24px;
   line-height: 34px;
   color: #000;
 }
-.testimonial .testimonial_content h4,
 .testimonial .testimonial_info h4 {
   font-size: 18px;
   line-height: 28px;
   color: #000;
 }
-.testimonial .testimonial_content h5,
 .testimonial .testimonial_info h5 {
   font-size: 14px;
   line-height: 24px;
   color: #000;
 }
-.testimonial .testimonial_content h6,
 .testimonial .testimonial_info h6 {
   font-size: 12px;
   line-height: 22px;
   color: #000;
 }
-.testimonial .testimonial_content p, .testimonial .testimonial_content ul, .testimonial .testimonial_content ol,
-.testimonial .testimonial_info p,
-.testimonial .testimonial_info ul,
-.testimonial .testimonial_info ol {
+.testimonial .testimonial_info p, .testimonial .testimonial_info ul, .testimonial .testimonial_info ol {
   font-size: 14px;
   line-height: 24px;
   color: #000;
 }
-.testimonial .testimonial_content a,
 .testimonial .testimonial_info a {
   color: #000;
   text-decoration: none;
 }
-.testimonial .testimonial_content a:hover, .testimonial .testimonial_content a:active, .testimonial .testimonial_content a:focus,
-.testimonial .testimonial_info a:hover,
-.testimonial .testimonial_info a:active,
-.testimonial .testimonial_info a:focus {
+.testimonial .testimonial_info a:hover, .testimonial .testimonial_info a:active, .testimonial .testimonial_info a:focus {
   color: #666;
   text-decoration: underline;
 }
-.testimonial .testimonial_content table tr,
 .testimonial .testimonial_info table tr {
   border-bottom: 1px solid #eeeeee;
 }
-.testimonial .testimonial_content table tr:nth-child(odd),
 .testimonial .testimonial_info table tr:nth-child(odd) {
   background: #eeeeee;
 }
-.testimonial .testimonial_content table tr th,
 .testimonial .testimonial_info table tr th {
   color: #fff;
   background: #000;
 }
-.testimonial .testimonial_content table.unstyled tr,
 .testimonial .testimonial_info table.unstyled tr {
   border-bottom: 0;
 }
-.testimonial .testimonial_content table.unstyled tr th,
 .testimonial .testimonial_info table.unstyled tr th {
   color: #000;
   background: none;
 }
-.testimonial .testimonial_content .table_overflow,
 .testimonial .testimonial_info .table_overflow {
   width: 100%;
   overflow-x: scroll;
@@ -4373,81 +4397,27 @@ label[for="date_picker"] span {
 .widget {
   margin: 0 0 30px 0;
   background: #eee;
-  padding: 10px 10px 20px 10px;
+  color: #000;
+  padding: 15px;
   text-align: center;
-}
-.widget h1 {
-  font-size: 36px;
-  line-height: 46px;
-  color: #000;
-}
-.widget h2 {
-  font-size: 30px;
-  line-height: 40px;
-  color: #000;
-}
-.widget h3 {
-  font-size: 24px;
-  line-height: 34px;
-  color: #000;
-}
-.widget h4 {
-  font-size: 18px;
-  line-height: 28px;
-  color: #000;
-}
-.widget h5 {
-  font-size: 14px;
-  line-height: 24px;
-  color: #000;
-}
-.widget h6 {
-  font-size: 12px;
-  line-height: 22px;
-  color: #000;
-}
-.widget p, .widget ul, .widget ol {
-  font-size: 14px;
-  line-height: 24px;
-  color: #000;
-}
-.widget a {
-  color: #000;
-  text-decoration: none;
-}
-.widget a:hover, .widget a:active, .widget a:focus {
-  color: #666;
-  text-decoration: underline;
-}
-.widget table tr {
-  border-bottom: 1px solid #eeeeee;
-}
-.widget table tr:nth-child(odd) {
-  background: #eeeeee;
-}
-.widget table tr th {
-  color: #fff;
-  background: #000;
-}
-.widget table.unstyled tr {
-  border-bottom: 0;
-}
-.widget table.unstyled tr th {
-  color: #000;
-  background: none;
-}
-.widget .table_overflow {
-  width: 100%;
-  overflow-x: scroll;
+  border: 0px solid #ddd;
+  border-radius: 0px;
 }
 .widget h1, .widget h2, .widget h3, .widget h4, .widget h5, .widget h6 {
-  margin: 0 0 10px 0;
   font-size: 25px;
+  color: #000;
+}
+.widget h1, .widget h2, .widget h3, .widget h4, .widget h5, .widget h6, .widget p {
+  margin: 0 0 7.5px 0;
 }
 .widget img {
   width: 100%;
   height: auto;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
+}
+.widget .button {
+  display: block;
+  margin: 15px 0 0 0;
 }
 .widget .button a {
   border-style: solid;
@@ -4464,6 +4434,10 @@ label[for="date_picker"] span {
   border-width: 2px;
   border-color: #000;
   border-radius: 5px;
+  background: none;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: auto;
 }
 .widget .button a:hover, .widget .button a:active, .widget .button a:focus {
   outline: 0;
@@ -4471,4 +4445,142 @@ label[for="date_picker"] span {
   background: #000;
   color: #fff;
   border-color: #000;
+}
+.widget .button a:hover, .widget .button a:active, .widget .button a:focus {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.pullout {
+  margin: 0 0 30px 0;
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  text-align: left;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.pullout h1, .pullout h2, .pullout h3, .pullout h4, .pullout h5, .pullout h6 {
+  font-size: 25px;
+  color: #fff;
+}
+.pullout h1, .pullout h2, .pullout h3, .pullout h4, .pullout h5, .pullout h6, .pullout p {
+  margin: 0 0 15px 0;
+}
+.pullout img {
+  margin: 0 0 30px 0;
+}
+.pullout .button {
+  display: block;
+  margin: 20px 0 0 0;
+}
+.pullout .button a {
+  border-style: solid;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background: none;
+  color: #000;
+  border-width: 2px;
+  border-color: #000;
+  border-radius: 5px;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: auto;
+}
+.pullout .button a:hover, .pullout .button a:active, .pullout .button a:focus {
+  outline: 0;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+.pullout .button a:hover, .pullout .button a:active, .pullout .button a:focus {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+.pullout.option2 {
+  background: #282828;
+  color: #fff;
+  padding: 30px;
+  text-align: left;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.pullout.option2 h1, .pullout.option2 h2, .pullout.option2 h3, .pullout.option2 h4, .pullout.option2 h5, .pullout.option2 h6 {
+  color: #fff;
+}
+.pullout.option2 h1, .pullout.option2 h2, .pullout.option2 h3, .pullout.option2 h4, .pullout.option2 h5, .pullout.option2 h6, .pullout.option2 p {
+  margin: 0 0 15px 0;
+}
+.pullout.option2 img {
+  margin: 0 0 30px 0;
+}
+.pullout.option2 .button {
+  margin: 20px 0 0 0;
+}
+.pullout.option2 .button a {
+  background: auto;
+  color: auto;
+  border: 2px solid auto;
+  border-radius: auto;
+}
+.pullout.option2 .button a:hover, .pullout.option2 .button a:active, .pullout.option2 .button a:focus {
+  background: auto;
+  color: auto;
+  border-color: auto;
+}
+.pullout.option3 {
+  background: #434343;
+  color: #fff;
+  padding: 30px;
+  text-align: left;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.pullout.option3 h1, .pullout.option3 h2, .pullout.option3 h3, .pullout.option3 h4, .pullout.option3 h5, .pullout.option3 h6 {
+  color: #fff;
+}
+.pullout.option3 h1, .pullout.option3 h2, .pullout.option3 h3, .pullout.option3 h4, .pullout.option3 h5, .pullout.option3 h6, .pullout.option3 p {
+  margin: 0 0 15px 0;
+}
+.pullout.option3 img {
+  margin: 0 0 30px 0;
+}
+.pullout.option3 .button {
+  margin: 20px 0 0 0;
+}
+.pullout.option3 .button a {
+  background: auto;
+  color: auto;
+  border: 2px solid auto;
+  border-radius: auto;
+}
+.pullout.option3 .button a:hover, .pullout.option3 .button a:active, .pullout.option3 .button a:focus {
+  background: auto;
+  color: auto;
+  border-color: auto;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+  header .row {
+    position: relative;
+  }
+  header .col-md-6:last-child {
+    position: initial;
+  }
+  header .col-md-6.affix {
+    position: fixed;
+  }
 }

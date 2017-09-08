@@ -43,3 +43,8 @@ $('.section.two > .container').each(function(){
 $('.section.three > .container').each(function(){
     if($.trim($(this).html()) == '') $('.section.three').css('padding','0');
 });
+
+// REMOVE WIDGET CLASS IF PULLOUT CLASS IS ADDED
+if ($('.widget').hasClass('pullout')){
+    $('.pullout').removeClass('widget');
+}

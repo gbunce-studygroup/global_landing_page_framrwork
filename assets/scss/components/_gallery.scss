@@ -3,6 +3,7 @@
 	@include component_margin;
 	padding: $gallery_space_left_and_right;
 	h1, h2, h3, h4, h5, h6{
+		margin-top: 0;
 		margin-left: 0;
 		font-size: $component_title_size;
 	}

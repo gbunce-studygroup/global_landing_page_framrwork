@@ -14,17 +14,9 @@ header{
 	background: $header_background_colour;
 	.col-md-6{
 		&.affix{
+			@include animate (slideInDown);
 			background: $sticky_header_background_colour;
 			box-shadow: $sticky_header_shadow;
-			@include animate (slideInDown);
-			z-index: 16;
-			top: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			.language_links_v2{
-				display: none;
-			}
 		}
 	}
 }

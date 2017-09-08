@@ -1,1 +1,15 @@
 @import "bootstrap"; 				// _bootstrap.scss
+header{
+	.col-md-6{
+		&.affix{
+			z-index: 16;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			.language_links_v2{
+				display: none;
+			}
+		}
+	}
+}

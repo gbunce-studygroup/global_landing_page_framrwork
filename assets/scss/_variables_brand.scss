@@ -9,7 +9,7 @@ $form_colour_s:          #eeeeee !default; // _s stands for secondary. This shou
 
 
 // ********************************** PAGE SECTIONS ********************************** //
-$section_padding:						 30px 0 !default;
+$section_padding:						 30px 0 0 0 !default;
 $section_one_background_colour:			 #fff !default;
 $section_two_background_colour:			 #eee !default;
 $section_three_background_colour:		 #ccc !default;
@@ -18,7 +18,7 @@ $section_three_background_colour:		 #ccc !default;
 // ************************************* HEADER ************************************* //
 
 $header_background_colour:               #eee !default;
-$header_padding:						 30px 0;
+$header_padding:						 30px 0 !default; // this gets divided by 1.5 for mobile
 $sticky_header_background_colour:		 #eee !default;
 $sticky_header_shadow:					 0px 0px 12px 0px rgba(0,0,0,0.08) !default;
 
@@ -131,16 +131,23 @@ $a_colour_hover:								#666 !default;
 $a_text_decoration_hover:						underline !default;
 
 // Accordion
-$accordion_text_colour:							#fff !default; 
-$accordion_icon_colour:							$accordion_text_colour !default; 
+$accordion_title_text_align:					center !default;
+$accordion_text_colour:							#fff !default;
+$accordion_text_and_icon_size:					20px !default;
+$accordion_icon_colour:							$accordion_text_colour !default;
 $accordion_background_colour:					#000 !default;
-$accordion_border_radius:						0 0 0 0 !default; 
+$accordion_padding:								10px 40px 10px 10px !default;
+$accordion_border_direction:					border !default;
+$accordion_border_radius:						0 0 0 0 !default;
 $accordion_border_width:						2px !default;
 $accordion_border_colour:						#000 !default;
 // Accordion open
 $accordion_background_colour_open:				#fff !default;
 $accordion_text_colour_open:					#000 !default; 
 $accordion_icon_colour_open:					$accordion_text_colour_open !default; 
+// Accordion content
+$accordion_content_background:					#eee !default;
+$accordion_content_padding:						20px 15px 10px 15px !default;
 
 // Carousel
 $carousel_caption_background_colour:     		#000 !default;
@@ -191,22 +198,111 @@ $map_background:								#fff !default;
 $map_padding:									10px !default;
 $map_text_align:								center !default;
 
-// Tabs
+// Tabs 
+$tab_border_width:								2px !default;
+$tab_border_colour:								#000 !default;
+// Tabs nav
+$tab_nav_padding:								10px 15px 8px 15px !default;
+$tab_nav_background:							none !default;
+$tab_nav_text_colour:							$main_colour !default;
+$tab_nav_font_size:								20px !default;
+// Tabs nav hover, active, focus
+$tab_nav_text_decoration:						underline !default;
+$tab_nav_text_colour_hover:						$main_colour !default;
+// Tabs nav active state
+$tab_nav_background_active:						#000 !default;
+$tab_nav_text_colour_active:					#fff !default;
+// Tab content
+$tab_content_background:						#eee !default;
+$tab_content_padding:							20px 15px 10px 15px !default;
 
 // Testimonial
 $testimonial_image_margin:						0 0 20px 0 !default;
 $testimonial_background:						#fff !default;
-$testimonial_padding:							20px 10px !default;
+$testimonial_padding:							10px !default;
 $testimonial_text_align:						center !default;
+$testimonial_text_colour:						$main_colour !default;
+$testimonial_text_size:							20px !default;
+$testimonial_text_light_height:					30px !default;
 
 // Video
 $video_text_align:								center !default;
 
 // Widget
-$widget_image_margin:							0 0 10px 0 !default;
 $widget_background:								#eee !default;
-$widget_padding:								10px 10px 20px 10px !default;
+$widget_padding:								15px !default;
 $widget_text_align:								center !default;
+$widget_title_colour:							#000 !default;
+$widget_text_colour:							#000 !default;
+$widget_border_property:						border !default;
+$widget_border:									0px solid #ddd !default;
+$widget_border_radius:							0px !default;
+// Pullout widget CTA
+$widget_cta_background_colour:					none !default; 
+$widget_cta_text_colour:						$widget_title_colour !default;
+$widget_cta_border:								2px solid $widget_title_colour !default;
+$widget_cta_border_radius:						auto !default;
+// Pullout widget CTA hover, active, focus
+$widget_cta_background_colour_hover:			$widget_title_colour !default;
+$widget_cta_text_colour_hover:					#fff !default;
+$widget_cta_border_colour_hover:				$widget_title_colour !default;
+
+// Pullout widget
+$pullout_background:							$main_colour !default;
+$pullout_title_colour:							#fff !default;
+$pullout_text_colour:							#fff !default;
+$pullout_padding:								30px !default;
+$pullout_text_align:							left !default;
+$pullout_border_property:						border !default;
+$pullout_border:								2px solid #fff !default;
+$pullout_border_radius:							10px !default;
+// Pullout widget CTA
+$pullout_cta_background_colour:					none !default; 
+$pullout_cta_text_colour:						$pullout_title_colour !default;
+$pullout_cta_border:							2px solid $pullout_title_colour !default;
+$pullout_cta_border_radius:						auto !default;
+// Pullout widget CTA hover, active, focus
+$pullout_cta_background_colour_hover:			$pullout_title_colour !default;
+$pullout_cta_text_colour_hover:					#000 !default;
+$pullout_cta_border_colour_hover:				$pullout_title_colour !default;
+
+// ------------- Pullout option 2 ------------- //
+$pullout_background_2:							#282828 !default;
+$pullout_title_colour_2:						$pullout_title_colour !default;
+$pullout_text_colour_2:							$pullout_text_colour !default;
+$pullout_padding_2:								$pullout_padding !default;
+$pullout_text_align_2:							$pullout_text_align !default;
+$pullout_border_property_2:						$pullout_border_property !default;
+$pullout_border_2:								$pullout_border !default;
+$pullout_border_radius_2:						$pullout_border_radius !default;
+// Pullout widget option 2 CTA
+$pullout_cta_background_colour_2:				auto !default; 
+$pullout_cta_text_colour_2:						auto !default;
+$pullout_cta_border_2:							2px solid auto !default;
+$pullout_cta_border_radius_2:					auto !default;
+// Pullout widget option 2 CTA hover, active, focus
+$pullout_cta_background_colour_hover_2:			auto !default;
+$pullout_cta_text_colour_hover_2:				auto !default;
+$pullout_cta_border_colour_hover_2:				auto !default;
+
+// ------------- Pullout option 3 ------------- //
+$pullout_background_3:							#434343 !default;
+$pullout_title_colour_3:						$pullout_title_colour !default;
+$pullout_text_colour_3:							$pullout_text_colour !default;
+$pullout_padding_3:								$pullout_padding !default;
+$pullout_text_align_3:							$pullout_text_align !default;
+$pullout_border_property_3:						$pullout_border_property !default;
+$pullout_border_3:								$pullout_border !default;
+$pullout_border_radius_3:						$pullout_border_radius !default;
+// Pullout widget option 3 CTA
+$pullout_cta_background_colour_3:				auto !default; 
+$pullout_cta_text_colour_3:						auto !default;
+$pullout_cta_border_3:							2px solid auto !default;
+$pullout_cta_border_radius_3:					auto !default;
+// Pullout widget option 3 CTA hover, active, focus
+$pullout_cta_background_colour_hover_3:			auto !default;
+$pullout_cta_text_colour_hover_3:				auto !default;
+$pullout_cta_border_colour_hover_3:				auto !default;
 
 
 // ************************************** COMPONENT SHARED STYLES ************************************** //

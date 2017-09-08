@@ -42,10 +42,14 @@
             <div class="col-md-6">
                 {% include "components/accordion" %}
                 {% include "components/tabs" %}
-                {% include "components/content_box" %}
             </div>
             <div class="col-md-6">
                 {% include "components/video" %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {% include "components/content_box" %}
             </div>
         </div>
 
@@ -56,7 +60,7 @@
 <div class="section two">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 {% include 'components/widget'%}
                     {% assign className = 'pullout' %}
                     {% assign title = 'This is a pullout widget' %}
@@ -64,8 +68,21 @@
                     {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
                     {% assign button = 'Find out more' %}
             </div>
-            <div class="col-md-6">
-                {% include "components/map" %}
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout option2' %}
+                    {% assign title = 'This is a pullout widget' %}
+                    {% assign image_size = '' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
+                    {% assign button = 'Find out more' %}
+            </div>
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout option3' %}
+                    {% assign title = 'This is a pullout widget' %}
+                    {% assign image_size = '' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
+                    {% assign button = 'Find out more' %}
             </div>
         </div>
         <div class="row">

@@ -6765,3 +6765,13 @@ button.close {
     display: none !important;
   }
 }
+header .col-md-6.affix {
+  z-index: 16;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+header .col-md-6.affix .language_links_v2 {
+  display: none;
+}
