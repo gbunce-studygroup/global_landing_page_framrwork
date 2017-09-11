@@ -46,6 +46,36 @@
 }
 
 @media (max-width: $screen-sm-max){
+	.carousel{
+		@include component_margin;
+		.carousel-indicators{
+			display: none;
+		}
+		.carousel-control{
+			display: block;
+			opacity: 1;
+			background: none;
+			&:after{
+				@include fa-icon;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				text-shadow: none;
+			}
+			&.left{
+				&:after{
+					content: "\f053";
+					left: 15px;
+				}
+			}
+			&.right{
+				&:after{
+					content: "\f054";
+					right: 15px;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $screen-xs-max){

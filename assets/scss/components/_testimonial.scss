@@ -41,6 +41,21 @@
 }
 
 @media (max-width: $screen-sm-max){
+
+	.testimonial{
+		.col-md-12 &{
+			text-align: $testimonial_text_align;
+			img{
+				width: 100%;
+				float: none;
+				margin: $testimonial_image_margin;
+			}
+		}
+	}
+
+
+
+
 }
 
 @media (max-width: $screen-xs-max){

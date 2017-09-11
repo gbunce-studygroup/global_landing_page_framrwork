@@ -51,7 +51,7 @@
 		}
 	}
 	.col-md-6 &, .col-md-5 &, .col-md-4 &, .col-md-3 &, .col-md-2 &{
-		padding: 0 8px;
+		padding: $gallery_space_left_and_right;
 		@include component_margin;
 		.row{
 			&:after{
@@ -59,7 +59,7 @@
 			}
 			.col-md-6, .col-sm-6, .col-xs-6{
 				width: 50%;
-				padding: 7px;
+				padding: $gallery_space_between_images;
 			}
 		}
 	}

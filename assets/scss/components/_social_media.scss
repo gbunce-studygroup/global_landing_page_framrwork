@@ -33,6 +33,15 @@
 }
 
 @media (max-width: $screen-sm-max){
+	.social_media_wrapper{
+		@include component_margin;
+		text-align: center;
+		.social_media{ //UL
+			li{
+				margin: 0 ($space_between_icons / 2);
+			}
+		}
+	}
 }
 
 @media (max-width: $screen-xs-max){

@@ -67,6 +67,46 @@
 }
 
 @media (max-width: $screen-sm-max){
+	.hero{
+		max-width: 1600px;
+		margin: 0 auto;
+		min-height: auto;
+		height: auto;
+		background-size: 170%;
+		background-color: $hero_content_background_mobile;
+		&:after{
+			display: none;
+		}
+		.image_size_placeholder{
+			background: $hero_overlay;
+			padding: 48% 0 0;
+			height: 0;
+		}
+		.container{
+			position: relative;
+			left: 0;
+			right: 0;
+			bottom: auto;
+		}
+		.hero_content{
+			padding: (nth($component_margin, 3) / 1.5);
+			h1, h2, h3, h4, h5, h6, p{
+				color: $hero_text_colour_mobile;
+			}
+			.button{
+				a{
+					background: $hero_cta_background_colour_mobile;
+					color: $hero_cta_text_colour_mobile;
+					border-color: $hero_cta_border_colour_mobile;
+					&:hover, &:active, &:focus{
+						background: $hero_cta_background_colour_mobile_hover;
+						color: $hero_cta_text_colour_mobile_hover;
+						border-color: $hero_cta_border_colour_mobile_hover;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $screen-xs-max){
