@@ -3,6 +3,7 @@
 	@include component_margin;
 	.nav-tabs{ // UL
 		border-bottom: $tab_border_width solid $tab_border_colour;
+		width: 100%;
 		li{
 			h1, h2, h3, h4, h5, h6, p{
 				a{

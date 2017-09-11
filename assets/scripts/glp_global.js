@@ -8,7 +8,6 @@
 @import "components/tab.js";
 @import "components/transition.js";
 @import "components/scrollspy.js";
-//@import "components/sticky_header.js";
 @import "components/modal.js";
 @import "components/tooltip.js";
 @import "components/popover.js";
@@ -48,3 +47,6 @@ $('.section.three > .container').each(function(){
 if ($('.widget').hasClass('pullout')){
     $('.pullout').removeClass('widget');
 }
+
+// insert div to match hero image scale
+$( ".hero" ).prepend( "<div class='image_size_placeholder'/></div>" );

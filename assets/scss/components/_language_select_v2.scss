@@ -6,6 +6,7 @@
 	li{ //.dropdown
 		list-style-type: none;
 		a{
+			color: $a_colour;
 			img{
 				height: 18px;
 			    margin-right: 5px;
@@ -16,12 +17,18 @@
 			}
 			&:hover, &:active, &:focus{
 				text-decoration: none;
+				color: $a_colour_hover;
 			}
 		}
 		ul{ //.dropdown-menu
 			display: none;
 			left: auto;
 			right: 0;
+			li{
+				a{
+					padding: 3px 10px;
+				}
+			}
 		}
 	}
 }
@@ -41,4 +48,32 @@
 }
 
 @media (max-width: $screen-xs-max){
+
+	.language_links_v2{ //ul
+		margin: -5px 0 0 0;
+		padding: 0;
+		li{ //.dropdown
+			a{
+				font-size: 0;
+				img{
+				    margin-bottom: 3px;
+				    margin-right: 0;
+					height: 14px;
+				}
+			}
+			ul{ //.dropdown-menu
+				li{
+					a{
+						font-size: 13px;
+						img{
+							margin-right: 7px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
 }

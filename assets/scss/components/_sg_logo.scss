@@ -1,8 +1,10 @@
 /* SG LOGO COMPONENT */
 .sg_logo{
+	text-align: right;
 	p{
+		color: $footer_maintained_by_colour;
 		a{
-			img{}			
+			img{}
 		}		
 	}
 }
@@ -14,6 +16,12 @@
 }
 
 @media (max-width: $screen-sm-max){
+
+	.sg_logo{
+		text-align: center;
+	}
+
+
 }
 
 @media (max-width: $screen-xs-max){

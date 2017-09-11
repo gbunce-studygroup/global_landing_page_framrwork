@@ -1257,7 +1257,6 @@ $('.tab_wrapper').each(function(){
 
 }(jQuery);
 
-//@import "components/sticky_header.js";
 /* ========================================================================
  * Bootstrap: modal.js v3.2.0
  * http://getbootstrap.com/javascript/#modals
@@ -2154,3 +2153,6 @@ $('.section.three > .container').each(function(){
 if ($('.widget').hasClass('pullout')){
     $('.pullout').removeClass('widget');
 }
+
+// insert div to match hero image scale
+$( ".hero" ).prepend( "<div class='image_size_placeholder'/></div>" );
