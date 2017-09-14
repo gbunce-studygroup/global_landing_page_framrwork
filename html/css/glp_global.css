@@ -6766,7 +6766,7 @@ button.close {
   }
 }
 header .col-md-6.affix {
-  z-index: 16;
+  z-index: 1001;
   top: 0;
   left: 0;
   right: 0;
@@ -6774,4 +6774,94 @@ header .col-md-6.affix {
 }
 header .col-md-6.affix .language_links_v2 {
   display: none;
+}
+
+.row_flex {
+  display: flex;
+}
+.row_flex .col-md-1.col_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row_flex .col-md-1.col_flex .widget, .row_flex .col-md-1.col_flex .pullout, .row_flex .col-md-1.col_flex .accordion, .row_flex .col-md-1.col_flex .button-group, .row_flex .col-md-1.col_flex .carousel, .row_flex .col-md-1.col_flex .content_box, .row_flex .col-md-1.col_flex .gallery, .row_flex .col-md-1.col_flex .hero, .row_flex .col-md-1.col_flex .map, .row_flex .col-md-1.col_flex .tab_wrapper, .row_flex .col-md-1.col_flex .testimonial, .row_flex .col-md-1.col_flex .video {
+  width: 100%;
+}
+.row_flex .col-md-2.col_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row_flex .col-md-2.col_flex .widget, .row_flex .col-md-2.col_flex .pullout, .row_flex .col-md-2.col_flex .accordion, .row_flex .col-md-2.col_flex .button-group, .row_flex .col-md-2.col_flex .carousel, .row_flex .col-md-2.col_flex .content_box, .row_flex .col-md-2.col_flex .gallery, .row_flex .col-md-2.col_flex .hero, .row_flex .col-md-2.col_flex .map, .row_flex .col-md-2.col_flex .tab_wrapper, .row_flex .col-md-2.col_flex .testimonial, .row_flex .col-md-2.col_flex .video {
+  width: 100%;
+}
+.row_flex .col-md-3.col_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row_flex .col-md-3.col_flex .widget, .row_flex .col-md-3.col_flex .pullout, .row_flex .col-md-3.col_flex .accordion, .row_flex .col-md-3.col_flex .button-group, .row_flex .col-md-3.col_flex .carousel, .row_flex .col-md-3.col_flex .content_box, .row_flex .col-md-3.col_flex .gallery, .row_flex .col-md-3.col_flex .hero, .row_flex .col-md-3.col_flex .map, .row_flex .col-md-3.col_flex .tab_wrapper, .row_flex .col-md-3.col_flex .testimonial, .row_flex .col-md-3.col_flex .video {
+  width: 100%;
+}
+.row_flex .col-md-4.col_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row_flex .col-md-4.col_flex .widget, .row_flex .col-md-4.col_flex .pullout, .row_flex .col-md-4.col_flex .accordion, .row_flex .col-md-4.col_flex .button-group, .row_flex .col-md-4.col_flex .carousel, .row_flex .col-md-4.col_flex .content_box, .row_flex .col-md-4.col_flex .gallery, .row_flex .col-md-4.col_flex .hero, .row_flex .col-md-4.col_flex .map, .row_flex .col-md-4.col_flex .tab_wrapper, .row_flex .col-md-4.col_flex .testimonial, .row_flex .col-md-4.col_flex .video {
+  width: 100%;
+}
+.row_flex .col-md-5.col_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row_flex .col-md-5.col_flex .widget, .row_flex .col-md-5.col_flex .pullout, .row_flex .col-md-5.col_flex .accordion, .row_flex .col-md-5.col_flex .button-group, .row_flex .col-md-5.col_flex .carousel, .row_flex .col-md-5.col_flex .content_box, .row_flex .col-md-5.col_flex .gallery, .row_flex .col-md-5.col_flex .hero, .row_flex .col-md-5.col_flex .map, .row_flex .col-md-5.col_flex .tab_wrapper, .row_flex .col-md-5.col_flex .testimonial, .row_flex .col-md-5.col_flex .video {
+  width: 100%;
+}
+.row_flex .col-md-6.col_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row_flex .col-md-6.col_flex .widget, .row_flex .col-md-6.col_flex .pullout, .row_flex .col-md-6.col_flex .accordion, .row_flex .col-md-6.col_flex .button-group, .row_flex .col-md-6.col_flex .carousel, .row_flex .col-md-6.col_flex .content_box, .row_flex .col-md-6.col_flex .gallery, .row_flex .col-md-6.col_flex .hero, .row_flex .col-md-6.col_flex .map, .row_flex .col-md-6.col_flex .tab_wrapper, .row_flex .col-md-6.col_flex .testimonial, .row_flex .col-md-6.col_flex .video {
+  width: 100%;
+}
+.row_flex .col-md-7.col_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row_flex .col-md-7.col_flex .widget, .row_flex .col-md-7.col_flex .pullout, .row_flex .col-md-7.col_flex .accordion, .row_flex .col-md-7.col_flex .button-group, .row_flex .col-md-7.col_flex .carousel, .row_flex .col-md-7.col_flex .content_box, .row_flex .col-md-7.col_flex .gallery, .row_flex .col-md-7.col_flex .hero, .row_flex .col-md-7.col_flex .map, .row_flex .col-md-7.col_flex .tab_wrapper, .row_flex .col-md-7.col_flex .testimonial, .row_flex .col-md-7.col_flex .video {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  header .row {
+    position: relative;
+  }
+  header .col-md-6:last-child {
+    position: initial;
+  }
+  header .col-md-6.affix {
+    position: fixed;
+  }
+
+  .row_flex {
+    display: block;
+  }
+  .row_flex .col-md-1.col_flex {
+    display: block;
+  }
+  .row_flex .col-md-2.col_flex {
+    display: block;
+  }
+  .row_flex .col-md-3.col_flex {
+    display: block;
+  }
+  .row_flex .col-md-4.col_flex {
+    display: block;
+  }
+  .row_flex .col-md-5.col_flex {
+    display: block;
+  }
+  .row_flex .col-md-6.col_flex {
+    display: block;
+  }
+  .row_flex .col-md-7.col_flex {
+    display: block;
+  }
 }

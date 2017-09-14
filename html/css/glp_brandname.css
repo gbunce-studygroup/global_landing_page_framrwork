@@ -2861,6 +2861,16 @@
   clip: auto;
 }
 
+@font-face {
+  font-family: 'font_regular';
+  src: url("../fonts/custom_font/regular_font_file_name.eot");
+  src: url("../fonts/custom_font/regular_font_file_name.eot#iefix") format("embedded-opentype"), url("../fonts/custom_font/regular_font_file_name.woff") format("woff");
+}
+@font-face {
+  font-family: 'font_bold';
+  src: url("../fonts/custom_font/bold_font_file_name.eot");
+  src: url("../fonts/custom_font/bold_font_file_name.eot#iefix") format("embedded-opentype"), url("../fonts/custom_font/bold_font_file_name.woff") format("woff");
+}
 body {
   color: #000;
 }
@@ -2947,6 +2957,49 @@ footer {
   animation-name: slideInDown;
 }
 
+@-webkit-keyframes slideInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slideInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(2000px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes slideInUp {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(2000px);
+  }
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  -moz-animation-name: slideInUp;
+  -o-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
 /* ACCORDION COMPONENT */
 .accordion {
   margin: 0 0 30px 0;
@@ -3016,6 +3069,12 @@ footer {
   border-bottom: 2px solid #000;
   background: #eee;
 }
+.accordion .panel-group .panel .panel-body h1, .accordion .panel-group .panel .panel-body h2, .accordion .panel-group .panel .panel-body h3, .accordion .panel-group .panel .panel-body h4, .accordion .panel-group .panel .panel-body h5, .accordion .panel-group .panel .panel-body h6, .accordion .panel-group .panel .panel-body p, .accordion .panel-group .panel .panel-body ul, .accordion .panel-group .panel .panel-body ol {
+  margin: 0 0 12px 0;
+}
+.accordion .panel-group .panel .panel-body ul, .accordion .panel-group .panel .panel-body ol {
+  padding: 0 0 0 17px;
+}
 .accordion .panel-group .panel .panel-body h1 {
   font-size: 36px;
   line-height: 46px;
@@ -3060,10 +3119,10 @@ footer {
   text-decoration: underline;
 }
 .accordion .panel-group .panel .panel-body table tr {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 .accordion .panel-group .panel .panel-body table tr:nth-child(odd) {
-  background: #eeeeee;
+  background: #eee;
 }
 .accordion .panel-group .panel .panel-body table tr th {
   color: #fff;
@@ -3159,8 +3218,10 @@ footer {
   margin: 0 0 30px 0;
 }
 .carousel .carousel-indicators {
-  bottom: auto;
-  top: 72%;
+  bottom: 10px;
+  left: auto;
+  right: 20px;
+  width: auto;
 }
 .carousel .carousel-indicators li {
   width: 25px;
@@ -3177,14 +3238,24 @@ footer {
   border-color: #fff;
 }
 .carousel .carousel-inner .item .carousel-caption {
-  position: relative;
-  bottom: auto;
-  left: auto;
-  right: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  text-align: left;
   padding: 20px;
-  background: #000;
+  text-shadow: none;
+  background: rgba(0, 0, 0, 0.7);
   font-size: 14px;
   color: #fff;
+}
+.carousel .carousel-inner .item .carousel-caption .vertical_align {
+  display: table;
+  height: 100%;
+}
+.carousel .carousel-inner .item .carousel-caption .vertical_align .vertical_align_inner {
+  display: table-cell;
+  vertical-align: middle;
 }
 .carousel .carousel-control {
   display: none;
@@ -3222,8 +3293,23 @@ footer {
     content: "\f054";
     right: 15px;
   }
+  .carousel .carousel-inner .item .carousel-caption {
+    background: black;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    text-align: center;
+  }
 }
 /* CONTENT BOX COMPONENT */
+.content_box h1, .content_box h2, .content_box h3, .content_box h4, .content_box h5, .content_box h6, .content_box p, .content_box ul, .content_box ol {
+  margin: 0 0 12px 0;
+}
+.content_box ul, .content_box ol {
+  padding: 0 0 0 17px;
+}
 .content_box h1 {
   font-size: 36px;
   line-height: 46px;
@@ -3268,10 +3354,10 @@ footer {
   text-decoration: underline;
 }
 .content_box table tr {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 .content_box table tr:nth-child(odd) {
-  background: #eeeeee;
+  background: #eee;
 }
 .content_box table tr th {
   color: #fff;
@@ -3294,6 +3380,18 @@ footer {
 
 /* COOKIE BAR COMPONENT */
 .cookie-bar {
+  -webkit-animation-name: slideInUp;
+  -moz-animation-name: slideInUp;
+  -o-animation-name: slideInUp;
+  animation-name: slideInUp;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 15px;
@@ -3422,110 +3520,95 @@ footer {
     text-align: center;
   }
 }
-/* ENQUIRY & BROCHURE DOWNLOAD FORM COMPONENTS */
-.form {
+/* ENQUIRY FORM COMPONENT */
+.form-horizontal {
   margin: 0 0 30px 0;
 }
-.form #form-loading {
-  border: 1px solid #000;
-  margin: 10px 0;
-  padding: 15px 50px;
+.form-horizontal h1, .form-horizontal h2, .form-horizontal h3, .form-horizontal h4, .form-horizontal h5, .form-horizontal h6, .form-horizontal p, .form-horizontal ul, .form-horizontal ol {
+  margin: 0 0 12px 0;
 }
-.form #form-loading p {
+.form-horizontal ul, .form-horizontal ol {
+  padding: 0 0 0 17px;
+}
+.form-horizontal h1 {
+  font-size: 36px;
+  line-height: 46px;
   color: #000;
-  text-align: center;
 }
-.form #form-loading .progress {
-  margin: 0;
-}
-.form #form-loading .progress .progress-bar-striped {
-  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
-  width: 100%;
-}
-.form #form-loading .progress .progress-bar-striped.progress-bar {
-  animation: load 3.5s, 2s linear 0s normal none infinite running progress-bar-stripes;
-}
-@keyframes load {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-.form #form-loading .progress .progress-bar {
-  background-color: #000;
-}
-.form fieldset #notificationArea .alert-error {
-  margin: 0 0 30px 0;
-  padding: 15px;
-  border: 1px solid red;
-  border-radius: 0;
-  color: red;
-  font-size: 16px;
-  text-align: center;
-}
-.form fieldset #notificationArea .alert-error:before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: '\f071';
-  display: block;
+.form-horizontal h2 {
   font-size: 30px;
-  margin-bottom: 10px;
-}
-.form fieldset .form-group.has-error label {
-  color: red;
-}
-.form fieldset .form-group.has-error .form-control {
-  border-color: red;
-}
-.form fieldset .form-group.has-error .help-block {
-  color: red;
-  margin-bottom: 0;
-}
-.form fieldset .form-group .control-label {
-  text-align: left;
-  font-size: 14px !important;
-}
-.form fieldset .form-group sup.required {
-  color: red;
-}
-.form fieldset .form-group .form-control, .form fieldset .form-group .controls {
-  font-size: 14px !important;
-}
-.form fieldset .form-group .form-control:focus, .form fieldset .form-group .controls:focus {
-  border-color: #000;
-  box-shadow: none;
-}
-.form fieldset .form-group .form-control.invalid, .form fieldset .form-group .controls.invalid {
-  border-color: red;
-}
-.form fieldset .form-group .form-control.date-picker, .form fieldset .form-group .controls.date-picker {
-  width: 100% !important;
-}
-.form fieldset .form-group .form-control .help-inline, .form fieldset .form-group .form-control .validation-msg, .form fieldset .form-group .controls .help-inline, .form fieldset .form-group .controls .validation-msg {
-  color: red;
-  padding-top: 7px;
-  display: block;
-}
-.form fieldset .form-group .radio label.radio {
-  display: inline-block;
-  margin-right: 20px;
-}
-.form fieldset .form-group .checkbox label.subscribe {
-  font-size: 14px !important;
-}
-.form fieldset .form-group p.text-info small {
+  line-height: 40px;
   color: #000;
 }
-.form fieldset .form-group .help-inline {
+.form-horizontal h3 {
+  font-size: 24px;
+  line-height: 34px;
+  color: #000;
+}
+.form-horizontal h4 {
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
+}
+.form-horizontal h5 {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+}
+.form-horizontal h6 {
+  font-size: 12px;
+  line-height: 22px;
+  color: #000;
+}
+.form-horizontal p, .form-horizontal ul, .form-horizontal ol {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+}
+.form-horizontal a {
+  color: #000;
+  text-decoration: none;
+}
+.form-horizontal a:hover, .form-horizontal a:active, .form-horizontal a:focus {
+  color: #666;
+  text-decoration: underline;
+}
+.form-horizontal table tr {
+  border-bottom: 1px solid #eee;
+}
+.form-horizontal table tr:nth-child(odd) {
+  background: #eee;
+}
+.form-horizontal table tr th {
+  color: #fff;
+  background: #000;
+}
+.form-horizontal table.unstyled tr {
+  border-bottom: 0;
+}
+.form-horizontal table.unstyled tr th {
+  color: #000;
+  background: none;
+}
+.form-horizontal .table_overflow {
+  width: 100%;
+  overflow-x: scroll;
+}
+.form-horizontal .form-group .control-label label sup.required {
   color: red;
 }
-.form fieldset button {
+.form-horizontal .form-group .controls .date-picker .datepicker {
+  width: 40%;
+  display: inline;
+}
+.form-horizontal .form-group .controls .date-picker .input-group-addon {
+  width: auto;
+  color: #000;
+}
+.form-horizontal .form-group .controls .date-picker .input-group-addon sup {
+  display: none;
+}
+.form-horizontal .form-group .controls #submitEnquiryButton {
   border-style: solid;
   display: inline-block;
   text-align: center;
@@ -3541,44 +3624,44 @@ footer {
   border-color: #000;
   border-radius: 5px;
 }
-.form fieldset button:hover, .form fieldset button:active, .form fieldset button:focus {
+.form-horizontal .form-group .controls #submitEnquiryButton:hover, .form-horizontal .form-group .controls #submitEnquiryButton:active, .form-horizontal .form-group .controls #submitEnquiryButton:focus {
   outline: 0;
   text-decoration: none;
   background: #fff;
   color: #000;
   border-color: #000;
 }
-.form fieldset button:after {
+.form-horizontal .form-group .controls #submitEnquiryButton:after {
   font-family: 'Glyphicons Halflings';
   font-size: 12px;
   content: "\e080";
   margin: 0 0 0 7px;
 }
-.form #download-links .form-group .brochure-link .brochure-link, .form .brochure-link-fields .form-group .brochure-link .brochure-link {
-  width: 33.33%;
+.form-horizontal .form-group.has-error {
+  margin-bottom: 35px;
 }
-.form #download-links .form-group .brochure-link .brochure-link div h1, .form #download-links .form-group .brochure-link .brochure-link div h2, .form #download-links .form-group .brochure-link .brochure-link div h3, .form #download-links .form-group .brochure-link .brochure-link div h4, .form #download-links .form-group .brochure-link .brochure-link div h5, .form #download-links .form-group .brochure-link .brochure-link div h6, .form .brochure-link-fields .form-group .brochure-link .brochure-link div h1, .form .brochure-link-fields .form-group .brochure-link .brochure-link div h2, .form .brochure-link-fields .form-group .brochure-link .brochure-link div h3, .form .brochure-link-fields .form-group .brochure-link .brochure-link div h4, .form .brochure-link-fields .form-group .brochure-link .brochure-link div h5, .form .brochure-link-fields .form-group .brochure-link .brochure-link div h6 {
-  font-size: 18px;
-  margin: 10px 0 5px;
+.form-horizontal .form-group.has-error .help-block, .form-horizontal .form-group.has-error .control-label, .form-horizontal .form-group.has-error .radio, .form-horizontal .form-group.has-error .checkbox, .form-horizontal .form-group.has-error .radio-inline, .form-horizontal .form-group.has-error .checkbox-inline {
+  color: red;
 }
-
-.telephone_small {
-  display: inline-block;
+.form-horizontal .form-group.has-error .help-block {
+  margin-bottom: 0;
+  display: block;
+  position: absolute;
+  left: 15px;
 }
-.telephone_small input {
-  width: 40px;
+.form-horizontal .form-group.has-error .date-picker .help-block {
+  left: 0;
 }
-
-.telephone_large {
-  display: inline-block;
+.form-horizontal .form-group.has-error .form-control {
+  border-color: red;
 }
-.telephone_large input {
-  width: auto;
+.form-horizontal .form-group.has-error .input-group-addon {
+  border-color: red;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
 }
-
-label[for="date_picker"] span {
-  cursor: pointer;
-  color: #000;
+.form-horizontal .form-group.has-error .input-group-addon .glyphicon {
+  color: #a94442;
 }
 
 .datepicker {
@@ -3667,7 +3750,7 @@ label[for="date_picker"] span {
 .datepicker .datepicker-days .table-condensed tbody tr td.day:hover,
 .datepicker .datepicker-months .table-condensed tbody tr td.day:hover,
 .datepicker .datepicker-years .table-condensed tbody tr td.day:hover {
-  background: #eeeeee;
+  background: #eee;
   cursor: pointer;
 }
 .datepicker .datepicker-days .table-condensed tbody tr td span.month,
@@ -3705,8 +3788,11 @@ label[for="date_picker"] span {
 .datepicker .datepicker-months .table-condensed tbody tr td span.year:hover,
 .datepicker .datepicker-years .table-condensed tbody tr td span.month:hover,
 .datepicker .datepicker-years .table-condensed tbody tr td span.year:hover {
-  background: #eeeeee;
+  background: #eee;
   cursor: pointer;
+}
+.datepicker .datepicker-days {
+  padding: 0 5px;
 }
 .datepicker .datepicker-months,
 .datepicker .datepicker-years {
@@ -3717,19 +3803,8 @@ label[for="date_picker"] span {
 }
 
 @media (max-width: 991px) {
-  .form #download-links .form-group .brochure-link .brochure-link, .form .brochure-link-fields .form-group .brochure-link .brochure-link {
-    width: 50%;
-  }
-}
-@media (max-width: 767px) {
-  .form #download-links, .form .brochure-link-fields {
-    text-align: center;
-  }
-  .form #download-links .form-group .brochure-link, .form .brochure-link-fields .form-group .brochure-link {
-    float: none;
-  }
-  .form #download-links .form-group .brochure-link .brochure-link, .form .brochure-link-fields .form-group .brochure-link .brochure-link {
-    width: 100%;
+  .form-horizontal .form-group .control-label {
+    text-align: left;
   }
 }
 /* GALLERY COMPONENT */
@@ -3819,6 +3894,9 @@ label[for="date_picker"] span {
   bottom: 20px;
   left: 25%;
   right: 25%;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  top: auto;
 }
 .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h1, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h2, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h3, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h4, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h5, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h6 {
   margin: 0;
@@ -3892,7 +3970,8 @@ label[for="date_picker"] span {
     right: auto;
     color: #000;
     text-shadow: none;
-    margin: 15px 20% 0 20%;
+    margin: 20px auto 0;
+    width: 60%;
   }
   .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-control {
     top: auto;
@@ -3931,95 +4010,130 @@ label[for="date_picker"] span {
 }
 .hero .container {
   position: absolute;
-  bottom: 30px;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
+  width: none;
 }
-.hero .hero_content {
+.hero .container.position_left, .hero .container.position_right {
+  top: 0;
+  bottom: 0;
+}
+.hero .container.position_left .row, .hero .container.position_right .row {
+  height: 100%;
+  width: 45%;
+}
+.hero .container.position_left .row [class*=col], .hero .container.position_right .row [class*=col] {
+  background: rgba(0, 0, 0, 0.2);
+  display: table;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.hero .container.position_left .row [class*=col] .hero_content, .hero .container.position_right .row [class*=col] .hero_content {
   background: none;
-  padding: 0;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
 }
-.hero .hero_content h1 {
+.hero .container.position_right .row {
+  float: right;
+}
+.hero .container [class*=col] {
+  padding-left: 0;
+  padding-right: 0;
+}
+.hero .container [class*=col] .hero_content {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.hero .container [class*=col] .hero_content h1, .hero .container [class*=col] .hero_content h2, .hero .container [class*=col] .hero_content h3, .hero .container [class*=col] .hero_content h4, .hero .container [class*=col] .hero_content h5, .hero .container [class*=col] .hero_content h6, .hero .container [class*=col] .hero_content p, .hero .container [class*=col] .hero_content ul, .hero .container [class*=col] .hero_content ol {
+  margin: 0 0 12px 0;
+}
+.hero .container [class*=col] .hero_content ul, .hero .container [class*=col] .hero_content ol {
+  padding: 0 0 0 17px;
+}
+.hero .container [class*=col] .hero_content h1 {
   font-size: 36px;
   line-height: 46px;
   color: #000;
 }
-.hero .hero_content h2 {
+.hero .container [class*=col] .hero_content h2 {
   font-size: 30px;
   line-height: 40px;
   color: #000;
 }
-.hero .hero_content h3 {
+.hero .container [class*=col] .hero_content h3 {
   font-size: 24px;
   line-height: 34px;
   color: #000;
 }
-.hero .hero_content h4 {
+.hero .container [class*=col] .hero_content h4 {
   font-size: 18px;
   line-height: 28px;
   color: #000;
 }
-.hero .hero_content h5 {
+.hero .container [class*=col] .hero_content h5 {
   font-size: 14px;
   line-height: 24px;
   color: #000;
 }
-.hero .hero_content h6 {
+.hero .container [class*=col] .hero_content h6 {
   font-size: 12px;
   line-height: 22px;
   color: #000;
 }
-.hero .hero_content p, .hero .hero_content ul, .hero .hero_content ol {
+.hero .container [class*=col] .hero_content p, .hero .container [class*=col] .hero_content ul, .hero .container [class*=col] .hero_content ol {
   font-size: 14px;
   line-height: 24px;
   color: #000;
 }
-.hero .hero_content a {
+.hero .container [class*=col] .hero_content a {
   color: #000;
   text-decoration: none;
 }
-.hero .hero_content a:hover, .hero .hero_content a:active, .hero .hero_content a:focus {
+.hero .container [class*=col] .hero_content a:hover, .hero .container [class*=col] .hero_content a:active, .hero .container [class*=col] .hero_content a:focus {
   color: #666;
   text-decoration: underline;
 }
-.hero .hero_content table tr {
-  border-bottom: 1px solid #eeeeee;
+.hero .container [class*=col] .hero_content table tr {
+  border-bottom: 1px solid #eee;
 }
-.hero .hero_content table tr:nth-child(odd) {
-  background: #eeeeee;
+.hero .container [class*=col] .hero_content table tr:nth-child(odd) {
+  background: #eee;
 }
-.hero .hero_content table tr th {
+.hero .container [class*=col] .hero_content table tr th {
   color: #fff;
   background: #000;
 }
-.hero .hero_content table.unstyled tr {
+.hero .container [class*=col] .hero_content table.unstyled tr {
   border-bottom: 0;
 }
-.hero .hero_content table.unstyled tr th {
+.hero .container [class*=col] .hero_content table.unstyled tr th {
   color: #000;
   background: none;
 }
-.hero .hero_content .table_overflow {
+.hero .container [class*=col] .hero_content .table_overflow {
   width: 100%;
   overflow-x: scroll;
 }
-.hero .hero_content h1, .hero .hero_content h2, .hero .hero_content h3, .hero .hero_content h4, .hero .hero_content h5, .hero .hero_content h6, .hero .hero_content p {
-  text-align: center;
-  color: #000;
+.hero .container [class*=col] .hero_content h1, .hero .container [class*=col] .hero_content h2, .hero .container [class*=col] .hero_content h3, .hero .container [class*=col] .hero_content h4, .hero .container [class*=col] .hero_content h5, .hero .container [class*=col] .hero_content h6, .hero .container [class*=col] .hero_content p, .hero .container [class*=col] .hero_content ul, .hero .container [class*=col] .hero_content ol, .hero .container [class*=col] .hero_content small {
+  color: #fff;
   margin: 0 0 20px 0;
 }
-.hero .hero_content h1, .hero .hero_content h2, .hero .hero_content h3, .hero .hero_content h4, .hero .hero_content h5, .hero .hero_content h6 {
+.hero .container [class*=col] .hero_content h1, .hero .container [class*=col] .hero_content h2, .hero .container [class*=col] .hero_content h3, .hero .container [class*=col] .hero_content h4, .hero .container [class*=col] .hero_content h5, .hero .container [class*=col] .hero_content h6 {
   line-height: 1.1;
 }
-.hero .hero_content p {
+.hero .container [class*=col] .hero_content p {
   line-height: 1.42857;
 }
-.hero .hero_content .button {
+.hero .container [class*=col] .hero_content .button {
   display: block;
-  text-align: center;
 }
-.hero .hero_content .button a {
+.hero .container [class*=col] .hero_content .button a {
   border-style: solid;
   display: inline-block;
   text-align: center;
@@ -4035,22 +4149,22 @@ label[for="date_picker"] span {
   border-color: #000;
   border-radius: 5px;
   background: auto;
-  color: auto;
+  color: #fff;
   border-width: auto;
-  border-color: auto;
+  border-color: #fff;
   border-radius: auto;
 }
-.hero .hero_content .button a:hover, .hero .hero_content .button a:active, .hero .hero_content .button a:focus {
+.hero .container [class*=col] .hero_content .button a:hover, .hero .container [class*=col] .hero_content .button a:active, .hero .container [class*=col] .hero_content .button a:focus {
   outline: 0;
   text-decoration: none;
   background: #000;
   color: #fff;
   border-color: #000;
 }
-.hero .hero_content .button a:hover, .hero .hero_content .button a:active, .hero .hero_content .button a:focus {
-  background: auto;
-  color: auto;
-  border-color: auto;
+.hero .container [class*=col] .hero_content .button a:hover, .hero .container [class*=col] .hero_content .button a:active, .hero .container [class*=col] .hero_content .button a:focus {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -4060,7 +4174,7 @@ label[for="date_picker"] span {
     min-height: auto;
     height: auto;
     background-size: 170%;
-    background-color: #000;
+    background-color: black;
   }
   .hero:after {
     display: none;
@@ -4070,27 +4184,32 @@ label[for="date_picker"] span {
     padding: 48% 0 0;
     height: 0;
   }
-  .hero .container {
+  .hero .container,
+  .hero .container.position_left,
+  .hero .container.position_right {
     position: relative;
-    left: 0;
-    right: 0;
     bottom: auto;
   }
-  .hero .hero_content {
+  .hero .container .row,
+  .hero .container.position_left .row,
+  .hero .container.position_right .row {
+    float: none;
+    width: auto;
+  }
+  .hero .container .row [class*=col],
+  .hero .container.position_left .row [class*=col],
+  .hero .container.position_right .row [class*=col] {
+    width: 100%;
+  }
+  .hero .container .row [class*=col] .hero_content,
+  .hero .container.position_left .row [class*=col] .hero_content,
+  .hero .container.position_right .row [class*=col] .hero_content {
+    text-align: center;
+    background: black;
     padding: 20px;
   }
-  .hero .hero_content h1, .hero .hero_content h2, .hero .hero_content h3, .hero .hero_content h4, .hero .hero_content h5, .hero .hero_content h6, .hero .hero_content p {
-    color: #fff;
-  }
-  .hero .hero_content .button a {
-    background: none;
-    color: #fff;
-    border-color: #fff;
-  }
-  .hero .hero_content .button a:hover, .hero .hero_content .button a:active, .hero .hero_content .button a:focus {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
+  .hero .container [class*=col] .hero_content {
+    margin-bottom: 0;
   }
 }
 /* LANGUAGE LINKS COMPONENT */
@@ -4261,8 +4380,14 @@ label[for="date_picker"] span {
 }
 .tab_wrapper .tab-content .tab-pane {
   padding: 20px 15px 10px 15px;
-  border-bottom: 2px solid #000;
+  border-bottom: 0px solid #000;
   background: #eee;
+}
+.tab_wrapper .tab-content .tab-pane h1, .tab_wrapper .tab-content .tab-pane h2, .tab_wrapper .tab-content .tab-pane h3, .tab_wrapper .tab-content .tab-pane h4, .tab_wrapper .tab-content .tab-pane h5, .tab_wrapper .tab-content .tab-pane h6, .tab_wrapper .tab-content .tab-pane p, .tab_wrapper .tab-content .tab-pane ul, .tab_wrapper .tab-content .tab-pane ol {
+  margin: 0 0 12px 0;
+}
+.tab_wrapper .tab-content .tab-pane ul, .tab_wrapper .tab-content .tab-pane ol {
+  padding: 0 0 0 17px;
 }
 .tab_wrapper .tab-content .tab-pane h1 {
   font-size: 36px;
@@ -4308,10 +4433,10 @@ label[for="date_picker"] span {
   text-decoration: underline;
 }
 .tab_wrapper .tab-content .tab-pane table tr {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 .tab_wrapper .tab-content .tab-pane table tr:nth-child(odd) {
-  background: #eeeeee;
+  background: #eee;
 }
 .tab_wrapper .tab-content .tab-pane table tr th {
   color: #fff;
@@ -4365,6 +4490,12 @@ label[for="date_picker"] span {
   font-size: 20px;
   line-height: 30px;
 }
+.testimonial .testimonial_info h1, .testimonial .testimonial_info h2, .testimonial .testimonial_info h3, .testimonial .testimonial_info h4, .testimonial .testimonial_info h5, .testimonial .testimonial_info h6, .testimonial .testimonial_info p, .testimonial .testimonial_info ul, .testimonial .testimonial_info ol {
+  margin: 0 0 12px 0;
+}
+.testimonial .testimonial_info ul, .testimonial .testimonial_info ol {
+  padding: 0 0 0 17px;
+}
 .testimonial .testimonial_info h1 {
   font-size: 36px;
   line-height: 46px;
@@ -4409,10 +4540,10 @@ label[for="date_picker"] span {
   text-decoration: underline;
 }
 .testimonial .testimonial_info table tr {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 .testimonial .testimonial_info table tr:nth-child(odd) {
-  background: #eeeeee;
+  background: #eee;
 }
 .testimonial .testimonial_info table tr th {
   color: #fff;
@@ -4620,6 +4751,8 @@ label[for="date_picker"] span {
   margin: 0 0 15px 0;
 }
 .pullout img {
+  width: 100%;
+  height: auto;
   margin: 0 0 30px 0;
 }
 .pullout .button {
@@ -4724,14 +4857,5 @@ label[for="date_picker"] span {
 @media (max-width: 991px) {
   header {
     padding: 20px;
-  }
-  header .row {
-    position: relative;
-  }
-  header .col-md-6:last-child {
-    position: initial;
-  }
-  header .col-md-6.affix {
-    position: fixed;
   }
 }

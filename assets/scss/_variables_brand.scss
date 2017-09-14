@@ -5,7 +5,14 @@ $main_colour:            #000 !default; // Use this for ting like main body text
 
 // form colours
 $form_colour:            #000 !default; // This should be a medium/darker brand colour
-$form_colour_s:          #eeeeee !default; // _s stands for secondary. This should be a lighter brand colour
+$form_colour_s:          #eee !default; // _s stands for secondary. This should be a lighter brand colour
+
+
+// ************************************** FONTS ************************************** //
+
+// Font path - change to match the font file names
+$font_reg_path:				 			 regular_font_file_name !default;
+$font_bold_path:			 			 bold_font_file_name !default;
 
 
 // ********************************** PAGE SECTIONS ********************************** //
@@ -150,7 +157,8 @@ $accordion_content_background:					#eee !default;
 $accordion_content_padding:						20px 15px 10px 15px !default;
 
 // Carousel
-$carousel_caption_background_colour:     		#000 !default;
+$carousel_caption_background_colour:     		rgba($main_colour, 0.7) !default;
+$carousel_caption_background_colour_mobile:		rgba($carousel_caption_background_colour, 1) !default;
 $carousel_text_size:                     		14px !default;
 $carousel_text_colour:                   		#fff !default;
 // Carousel indicators
@@ -174,38 +182,24 @@ $gallery_carousel_arrow_colour:					$a_colour !default;
 $gallery_carousel_text_colour:					#fff !default;
 $gallery_carousel_arrow_colour_hover:			$a_colour_hover !default;
 
-
 // Hero image
 $hero_height:									450px !default;
 $hero_overlay:									rgba(0, 0, 0, 0.2) !default;
-$hero_content_background:						none !default;
-$hero_content_padding:							0 !default;
-$hero_content_bottom:							30px !default;
-$hero_text_colour:								#000 !default;
-$hero_text_align:								center !default;
+$hero_content_fluid_layout:						none !default; // accepts '100%' or 'none'
+$hero_content_background:						rgba(0, 0, 0, 0.2) !default;
+$hero_content_padding:							15px !default;
+$hero_content_bottom:							30px !default; // center aligned content only
+$hero_text_colour:								#fff !default;
 // Hero cta - by default has the secondary cta styles, but they can be overridden with these variables
 $hero_cta_background_colour:					auto !default; 
-$hero_cta_text_colour:							auto !default;
+$hero_cta_text_colour:							#fff !default;
 $hero_cta_border_width:							auto !default;
-$hero_cta_border_colour:						auto !default;
+$hero_cta_border_colour:						#fff !default;
 $hero_cta_border_radius:						auto !default;
 // Hero CTA hover, active, focus
-$hero_cta_background_colour_hover:				auto !default;
-$hero_cta_text_colour_hover:					auto !default;
-$hero_cta_border_colour_hover:					auto !default;
-
-// Hero image - mobile styles
-$hero_content_background_mobile:				#000 !default;
-$hero_text_colour_mobile:						#fff !default;
-// Hero cta - by default has the secondary cta styles, but they can be overridden with these variables
-$hero_cta_background_colour_mobile:				none !default; 
-$hero_cta_text_colour_mobile:					#fff !default;
-$hero_cta_border_colour_mobile:					#fff !default;
-// Hero CTA hover, active, focus
-$hero_cta_background_colour_mobile_hover:		#fff !default;
-$hero_cta_text_colour_mobile_hover:				#000 !default;
-$hero_cta_border_colour_mobile_hover:			#fff !default;
-
+$hero_cta_background_colour_hover:				#fff !default;
+$hero_cta_text_colour_hover:					#000 !default;
+$hero_cta_border_colour_hover:					#fff !default;
 
 // Map
 $map_background:								#fff !default;
@@ -213,8 +207,10 @@ $map_padding:									10px !default;
 $map_text_align:								center !default;
 
 // Tabs 
-$tab_border_width:								2px !default;
-$tab_border_colour:								#000 !default;
+$tab_border_top_width:							2px !default;
+$tab_border_top_colour:							#000 !default;
+$tab_border_bottom_width:						0px !default;
+$tab_border_bottom_colour:						#000 !default;
 // Tabs nav
 $tab_nav_padding:								10px 15px 8px 15px !default;
 $tab_nav_background:							none !default;

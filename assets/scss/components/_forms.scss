@@ -1,185 +1,70 @@
-/* ENQUIRY & BROCHURE DOWNLOAD FORM COMPONENTS */
-.form{
+/* ENQUIRY FORM COMPONENT */
+.form-horizontal{
 	@include component_margin;
-	.form-summary{}
-	#form-loading{
-		border: 1px solid $main_colour;
-		margin: 10px 0;
-		padding: 15px 50px;
-		p{
-			color: $form_colour;
-			text-align: center;
-		}
-		.progress{
-			margin: 0;
-			.progress-bar-striped{
-				background-image: linear-gradient(45deg, darken($form_colour, 10%) 25%, transparent 25%, transparent 50%, darken($form_colour, 10%) 50%, darken($form_colour, 10%) 75%, transparent 75%, transparent);
-				width: 100%;
-			    &.progress-bar{
-				    animation: load 3.5s, 2s linear 0s normal none infinite running progress-bar-stripes;
-					@keyframes load {
-					    0%   {width: 0%;}
-					    100% {width: 100%;}
-					}
-			    }
-			}
-			.progress-bar{
-				background-color: $form_colour;
+	@include content_text_styles;
+	.form-group{
+		.control-label{ //col-md-5
+			label{
+				sup.required{
+					color: red;
+				}
 			}
 		}
-	}
-	fieldset{
-		#notificationArea{ // VALADATION MESSAGE STYLES
-			.alert-error{
-				margin: 0 0 30px 0;
-				padding: 15px;
-				border: 1px solid red;
-				border-radius: 0;
-				color: red;
-				font-size: 16px;
-				text-align: center;
-				&:before{
-					@include fa-icon;
-					content: '\f071';
-					display: block;
-					font-size: 30px;
-					margin-bottom: 10px;
-				}
-
+		.controls{ //col-md-7
+			.form-control{
+				&.required{}
 			}
-		}
-		.form-group{
-			&.has-error{ // VALADATION MESSAGE STYLES
-				label{
-					color: red;
+			.date-picker{ // datepicker form field
+				.datepicker{
+					width: 40%;
+					display: inline;
 				}
-				.form-control{
-					border-color: red;
-				}
-				.help-block{
-					color: red;
-					margin-bottom: 0;
-				}
-			}
-			.control-label{
-				text-align: left;
-				font-size: 14px !important;
-			}
-			sup{
-				&.required{
-					color: red;
-				}
-			}
-			.form-control, .controls{ //(select & input)
-				font-size: 14px !important;
-				&:focus{
-					border-color: $main_colour;
-					box-shadow: none;
-				}
-				&.invalid{
-					border-color: red;
-				}
-				&.date-picker{
-					width: 100% !important;
-				}
-				.help-inline, .validation-msg{ // brochure download from validation message
-					color: red;
-					padding-top: 7px;
-					display: block;
-				}
-			}
-			.radio{
-				label.radio{
-					display: inline-block;
-					margin-right: 20px;
-					input{}
-				}
-			}
-			.checkbox{
-				label.subscribe{
-					font-size: 14px !important;
-				}
-			}
-			p.text-info{
-				small{
+				.input-group-addon{
+					width: auto;
 					color: $main_colour;
-					strong{}
-				}
-			}
-			// Phone field spacing and validation styles
-			.help-inline{
-				color: red;
-			}
-		}
-		button{
-			@include form_cta;
-		}
-	}
-	#download-links, .brochure-link-fields{ // brochure download item styles
-		.form-group{
-			.brochure-link{ // brochure download page
-				.brochure-link{
-					width: 33.33%;
-					div{
-						h1, h2, h3, h4, h5, h6{
-							font-size: 18px;
-							margin: 10px 0 5px;
-						}
+					sup{
+                        display: none;
 					}
 				}
 			}
+			#submitEnquiryButton{
+				@include form_cta;
+			}
+		}
+		// validation styles
+		&.has-error{
+			margin-bottom: 35px;
+			.help-block, .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline{
+				color: red;
+			}
+			.help-block{
+				margin-bottom: 0;
+				display: block;
+				position: absolute;
+				left: 15px;
+			}
+			.date-picker{
+				.help-block{
+					left: 0;
+				}
+			}
+			.form-control{
+				border-color: red;
+				&.datepicker{}
+			}
+			.input-group-addon{
+				border-color: red;
+				border-left: none;
+				border-radius: 0 4px 4px 0;
+				.glyphicon{
+					color: #a94442;
+				}
+			}
 		}
 	}
 }
 
-// Phone field spacing and validation styles
-.telephone_small{
-    display: inline-block;
-    input{
-    	width: 40px;
-    }
-}
-.telephone_large{
-    display: inline-block;
-    input{
-    	width: auto;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// Datepicker
-// --------------------------------------------------
-label[for="date_picker"]{ // datapicker icon
-    span{
-        cursor: pointer;
-        color: $form_colour;
-    }
-}
-// NON JQUERY UI DATEPICKER - BELLERBYS APP & ENQUIRY FORM FOR EXAMPLE
+// Datepick - dropdown
 .datepicker{
     min-width: 240px;
     display: none;
@@ -276,6 +161,9 @@ label[for="date_picker"]{ // datapicker icon
             }
         }
     }
+    .datepicker-days{
+    	padding: 0 5px;
+    }
     .datepicker-months,       
     .datepicker-years{
         max-width: 240px;
@@ -296,41 +184,6 @@ label[for="date_picker"]{ // datapicker icon
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: $screen-lg-min){
 }
 
@@ -338,31 +191,14 @@ label[for="date_picker"]{ // datapicker icon
 }
 
 @media (max-width: $screen-sm-max){
-	.form{
-		#download-links, .brochure-link-fields{
-			.form-group{
-				.brochure-link{ // brochure download page
-					.brochure-link{
-						width: 50%;
-					}
-				}
+	.form-horizontal{
+		.form-group{
+			.control-label{ //col-md-5
+				text-align: left;
 			}
 		}
 	}
 }
 
 @media (max-width: $screen-xs-max){
-	.form{
-		#download-links, .brochure-link-fields{
-			text-align: center;
-			.form-group{
-				.brochure-link{ // brochure download page
-					float: none;
-					.brochure-link{
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
 }

@@ -104,7 +104,13 @@ $animate-scss-speed: 1s !default;
 // CONTENT BOX, TABS, ACCORDION & BLOG ARTICLE TEXT STYLES
 @mixin content_text_styles{
 
-    h1, h2, h3, h4, h5, h6, p{}
+    h1, h2, h3, h4, h5, h6, p, ul, ol{
+        margin: 0 0 (nth($component_margin, 3) / 2.5) 0;
+    }
+
+    ul, ol{
+        padding: 0 0 0 17px;
+    }
 
     h1{
         font-size: $h1_size;

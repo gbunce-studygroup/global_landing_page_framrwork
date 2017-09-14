@@ -20,40 +20,71 @@
 	}
 	.container{
 		position: absolute;
-		bottom: $hero_content_bottom;
+		bottom: 0;
 		left: 0;
 		right: 0;
 		z-index: 1;
-	}
-	.hero_content{
-		@include content_text_styles;
-		background: $hero_content_background;
-		padding: $hero_content_padding;
-		h1, h2, h3, h4, h5, h6, p{
-			text-align: $hero_text_align;
-			color: $hero_text_colour;
-			margin: 0 0 20px 0;
+		width: $hero_content_fluid_layout;
+		&.position_left, &.position_right{
+			top: 0;
+			bottom: 0;
+			.row{
+				height: 100%;
+				width: 45%;
+				[class*=col]{
+					background: $hero_content_background;
+					display: table;
+					height: 100%;
+					padding-left: 15px;
+					padding-right: 15px;
+					.hero_content{
+						background: none;
+						text-align: left;
+						display: table-cell;
+						vertical-align: middle;
+					}
+				}
+			}
 		}
-		h1, h2, h3, h4, h5, h6{
-			line-height: 1.1;			
+		&.position_right{
+			.row{
+				float: right;
+			}
 		}
-		p{
-			line-height: 1.42857;
-		}
-		.button{
-			display: block;
-			text-align: $hero_text_align;
-			a{
-				@include secondary_cta;
-				background: $hero_cta_background_colour;
-				color: $hero_cta_text_colour;
-				border-width: $hero_cta_border_width;
-				border-color: $hero_cta_border_colour;
-				border-radius: $hero_cta_border_radius;
-				&:hover, &:active, &:focus{
-					background: $hero_cta_background_colour_hover;
-					color: $hero_cta_text_colour_hover;
-					border-color: $hero_cta_border_colour_hover;
+		[class*=col]{
+			padding-left: 0;
+			padding-right: 0;
+			.hero_content{
+				@include content_text_styles;
+				text-align: center;
+				background: $hero_content_background;
+				padding: $hero_content_padding;
+				margin-bottom: $hero_content_bottom;
+				h1, h2, h3, h4, h5, h6, p, ul, ol, small{
+					color: $hero_text_colour;
+					margin: 0 0 20px 0;
+				}
+				h1, h2, h3, h4, h5, h6{
+					line-height: 1.1;
+				}
+				p{
+					line-height: 1.42857;
+				}
+				.button{
+					display: block;
+					a{
+						@include secondary_cta;
+						background: $hero_cta_background_colour;
+						color: $hero_cta_text_colour;
+						border-width: $hero_cta_border_width;
+						border-color: $hero_cta_border_colour;
+						border-radius: $hero_cta_border_radius;
+						&:hover, &:active, &:focus{
+							background: $hero_cta_background_colour_hover;
+							color: $hero_cta_text_colour_hover;
+							border-color: $hero_cta_border_colour_hover;
+						}
+					}
 				}
 			}
 		}
@@ -73,7 +104,7 @@
 		min-height: auto;
 		height: auto;
 		background-size: 170%;
-		background-color: $hero_content_background_mobile;
+		background-color: rgba($hero_content_background, 1);
 		&:after{
 			display: none;
 		}
@@ -82,27 +113,28 @@
 			padding: 48% 0 0;
 			height: 0;
 		}
-		.container{
+		.container,
+		.container.position_left,
+		.container.position_right{
 			position: relative;
-			left: 0;
-			right: 0;
 			bottom: auto;
-		}
-		.hero_content{
-			padding: (nth($component_margin, 3) / 1.5);
-			h1, h2, h3, h4, h5, h6, p{
-				color: $hero_text_colour_mobile;
-			}
-			.button{
-				a{
-					background: $hero_cta_background_colour_mobile;
-					color: $hero_cta_text_colour_mobile;
-					border-color: $hero_cta_border_colour_mobile;
-					&:hover, &:active, &:focus{
-						background: $hero_cta_background_colour_mobile_hover;
-						color: $hero_cta_text_colour_mobile_hover;
-						border-color: $hero_cta_border_colour_mobile_hover;
+			.row{
+				float: none;
+				width: auto;
+				[class*=col]{
+					width: 100%;
+					.hero_content{
+						text-align: center;
+						background: rgba($hero_content_background, 1);
+						padding: (nth($component_margin, 3) / 1.5);
 					}
+				}
+			}
+		}
+		.container{
+			[class*=col]{
+				.hero_content{
+					margin-bottom: 0;
 				}
 			}
 		}
