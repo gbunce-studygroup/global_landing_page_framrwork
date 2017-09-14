@@ -2,8 +2,10 @@
 .carousel{
 	@include component_margin;
 	.carousel-indicators{
-		bottom: auto;
-		top: 72%;
+		bottom: 10px;
+		left: auto;
+		right: 20px;
+		width: auto;
 		li{
 			width: 25px;
 			height: 25px;
@@ -23,14 +25,24 @@
 		.item{
 			&.active{}
 			.carousel-caption{
-				position: relative;
-				bottom: auto;
-				left: auto;
-				right: auto;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: 50%;
+				text-align: left;
 				padding: 20px;
+				text-shadow: none;
 				background: $carousel_caption_background_colour;
 				font-size: $carousel_text_size;
 				color: $carousel_text_colour;
+				.vertical_align{
+					display: table;
+					height: 100%;
+					.vertical_align_inner{
+						display: table-cell;
+						vertical-align: middle;
+					}
+				}
 			}
 		}
 	}
@@ -72,6 +84,19 @@
 				&:after{
 					content: "\f054";
 					right: 15px;
+				}
+			}
+		}
+		.carousel-inner{
+			.item{
+				.carousel-caption{
+					background: $carousel_caption_background_colour_mobile;
+					position: relative;
+					bottom: auto;
+					left: auto;
+					right: auto;
+					width: 100%;
+					text-align: center;
 				}
 			}
 		}

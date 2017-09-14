@@ -2,7 +2,7 @@
 .tab_wrapper{
 	@include component_margin;
 	.nav-tabs{ // UL
-		border-bottom: $tab_border_width solid $tab_border_colour;
+		border-bottom: $tab_border_top_width solid $tab_border_top_colour;
 		width: 100%;
 		li{
 			h1, h2, h3, h4, h5, h6, p{
@@ -34,7 +34,7 @@
 	.tab-content{
 		.tab-pane{
 			padding: $tab_content_padding;
-			border-bottom: $tab_border_width solid $tab_border_colour;
+			border-bottom: $tab_border_bottom_width solid $tab_border_bottom_colour;
 			background: $tab_content_background;
 			@include content_text_styles;
 			&.active{}

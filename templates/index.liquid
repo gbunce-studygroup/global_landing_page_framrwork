@@ -10,8 +10,8 @@
         <div class="row">
             <div class="col-md-4">
                 {% include 'components/widget'%}
-                    {% assign className = '' %}
-                    {% assign title = 'Widget' %}
+                    {% assign className = 'pullout' %}
+                    {% assign title = 'Pullout' %}
                     {% assign image_size = '720x400' %}
                     {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>' %}
                     {% assign button = 'Apply now' %}
@@ -35,6 +35,22 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <div class="content_box">
+                    <h1>Test test test test</h1>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                    <h2>Test test test test</h2>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                    <h3>Test test test test</h3>
+                    <ul>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid.</li>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid enim eiusmod high life accusamus terry richardson ad squid.</li>
+                    </ul>
+                    <ol>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid.</li>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid enim eiusmod high life accusamus terry richardson ad squid.</li>
+                    </ol>
+                </div>
                 {% include "components/carousel" %}
             </div>
         </div>
@@ -56,11 +72,16 @@
     </div> <!-- /container -->
 </div> <!-- /section_one -->
 
-
 <div class="section two">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout' %}
+                    {% assign title = 'This is a pullout widget' %}
+                    {% assign image_size = '' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
+                    {% assign button = 'Find out more' %}
                 {% include 'components/widget'%}
                     {% assign className = 'pullout' %}
                     {% assign title = 'This is a pullout widget' %}
@@ -73,7 +94,7 @@
                     {% assign className = 'pullout option2' %}
                     {% assign title = 'This is a pullout widget' %}
                     {% assign image_size = '' %}
-                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p><p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p><p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
                     {% assign button = 'Find out more' %}
             </div>
             <div class="col-md-4">
@@ -81,7 +102,7 @@
                     {% assign className = 'pullout option3' %}
                     {% assign title = 'This is a pullout widget' %}
                     {% assign image_size = '' %}
-                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p><p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
                     {% assign button = 'Find out more' %}
             </div>
         </div>
@@ -89,15 +110,30 @@
             <div class="col-md-12">
                 {% include "components/gallery" %}
                 {% include "components/testimonial" %}
-            </div>
 
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4">
                 {% include "components/gallery" %}
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout' %}
+                    {% assign title = 'This is a pullout widget' %}
+                    {% assign image_size = '800x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
+                    {% assign button = 'Find out more' %}
             </div>
             <div class="col-md-6">
                 {% include "components/testimonial" %}
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout disable_flex' %}
+                    {% assign title = 'This is a pullout widget' %}
+                    {% assign image_size = '' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet consectetur adipisicing do eiusmod tempor.</p>' %}
+                    {% assign button = 'Find out more' %}
+            </div>
 
         </div>
     </div> <!-- /container -->
@@ -110,7 +146,6 @@
             <div class="col-md-12">
                 {% include "components/enquiry_form" %}
             </div>
-
         </div>
     </div> <!-- /container -->
 </div> <!-- /section_three close -->

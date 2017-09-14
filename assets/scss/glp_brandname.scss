@@ -3,8 +3,27 @@
 @import "mixins";
 @import "font-awesome"; // _font-awesome.scss
 
+@font-face{
+	font-family: 'font_regular';
+	src: url('../fonts/custom_font/#{$font_reg_path}.eot');
+	src: url('../fonts/custom_font/#{$font_reg_path}.eot#iefix') format('embedded-opentype'),
+		 url('../fonts/custom_font/#{$font_reg_path}.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'font_bold';
+	src: url('../fonts/custom_font/#{$font_bold_path}.eot');
+	src: url('../fonts/custom_font/#{$font_bold_path}.eot#iefix') format('embedded-opentype'),
+    	 url('../fonts/custom_font/#{$font_bold_path}.woff') format('woff');
+}
+
 body{
 	color: $main_colour;
+	//font-family: 'font_regular';
+}
+
+strong, b{
+	//font-family: 'font_bold';
 }
 
 #pageBody{}

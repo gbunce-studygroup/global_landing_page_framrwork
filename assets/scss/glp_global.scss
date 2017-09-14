@@ -2,7 +2,7 @@
 header{
 	.col-md-6{
 		&.affix{
-			z-index: 16;
+			z-index: 1001;
 			top: 0;
 			left: 0;
 			right: 0;
@@ -10,6 +10,49 @@ header{
 			.language_links_v2{
 				display: none;
 			}
+		}
+	}
+}
+
+// flex widgets & pullouts
+.row_flex{
+	display: flex;
+	@for $i from 1 through 7{
+	    .col-md-#{$i}{
+			&.col_flex{
+				display: flex; 
+				flex-wrap: wrap;
+				.widget, .pullout, .accordion, .button-group, .carousel, .content_box, .gallery, .hero, .map, .tab_wrapper, .testimonial, .video{
+					width: 100%;
+				}
+			}
+	    }
+	}
+}
+
+@media (max-width: $screen-sm-max){
+	header{
+		.row{
+			position: relative;
+		}
+		.col-md-6{
+			&:last-child{
+				position: initial;
+			}
+			&.affix{
+				position: fixed;
+			}
+		}
+	}
+	// flex widgets & pullouts
+	.row_flex{
+		display: block;
+		@for $i from 1 through 7{
+		    .col-md-#{$i}{
+				&.col_flex{
+					display: block;
+				}
+		    }
 		}
 	}
 }
