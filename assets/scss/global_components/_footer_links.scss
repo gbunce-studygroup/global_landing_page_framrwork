@@ -1,0 +1,28 @@
+/* FOOTER LINKS */
+.footer_links{ //ul
+	padding: 0;
+	li{
+		display: inline-block;
+		margin-right: 15px;
+		a{
+			&:hover, &:active, &:focus{
+				outline: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.footer_links{ //ul
+		text-align: center;
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

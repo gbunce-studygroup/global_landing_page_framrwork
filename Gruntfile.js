@@ -107,21 +107,57 @@ module.exports = function(grunt) {
                 tasks: ['liquid']
             }
 		},
-        
+
+
+        /* COPY COMPILED AND AUTOPREFIXED CSS FROM HTML/CSS TO LOCATION ON STAGING */
+        copy: {
+            main: {
+                files: [
+                {
+                    expand: true, 
+                    flatten: true,
+                    src: ['html/css/glp_global.css'], 
+                    dest: '///Volumes/Designer/css/globallandingpagesv2/',
+                    filter: 'isFile'
+                }],
+            },
+            glpbrandCss: {
+                files: [
+                {
+                    expand: true, 
+                    flatten: true,
+                    src: ['html/css/glp_brandname.css'], 
+                    dest: '///Volumes/Designer/css/globallandingpagesv2/', // CHANGE TO MATCH THE CSS LOCATION ON STAGING
+                    filter: 'isFile'
+                }],
+            },
+        },
+
 
         /* REPLACE NEW VERSION ON STAGING WITH UPDATED URL VERSION SO THAT IMAGES AND FONTS WILL WORK*/
         replace: {
-          another_example: {
-            src: ['///Volumes/Designer/css/ ____ /style.css'], // CHANGE TO MATCH THE CSS LOCATION ON STAGING
-            overwrite: true, // overwrite matched source files 
-            replacements: [{
-                from: '../fonts/',
-                to: "/fonts/" // CHANGE TO MATCH THE FONTS LOCATION ON STAGING
-            }, {
-                from: '../img/',
-                to: "/images/" // CHANGE TO MATCH THE IMAGE LOCATION ON STAGING
-            }]
-          }
+            glpglobal: {
+                src: ['///Volumes/Designer/css/globallandingpagesv2/glp_global.css'], // CHANGE TO MATCH THE CSS LOCATION ON STAGING
+                overwrite: true, // overwrite matched source files 
+                replacements: [{
+                    from: '../fonts/',
+                    to: "/fonts/globallandingpagesv2/global/" // CHANGE TO MATCH THE FONTS LOCATION ON STAGING
+                }, {
+                    from: '../img/',
+                    to: "/images/globallandingpagesv2/images/" // CHANGE TO MATCH THE IMAGE LOCATION ON STAGING
+                }]
+            },
+            glpbrand: {
+                src: ['///Volumes/Designer/css/globallandingpagesv2/glp_brandname.css'], // CHANGE TO MATCH THE CSS LOCATION ON STAGING
+                overwrite: true, // overwrite matched source files 
+                replacements: [{
+                    from: '../fonts/',
+                    to: "/fonts/globallandingpagesv2/global/" // CHANGE TO MATCH THE FONTS LOCATION ON STAGING
+                }, {
+                    from: '../img/',
+                    to: "/images/globallandingpagesv2/images/" // CHANGE TO MATCH THE IMAGE LOCATION ON STAGING
+                }]
+            }
         }
 	});
 
@@ -135,11 +171,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasksFromParent('grunt-contrib-watch');
 
     /* LOAD TASKS TO UPDATE CSS ON STAGING */
+    grunt.loadNpmTasksFromParent('grunt-contrib-copy');
     grunt.loadNpmTasksFromParent('grunt-text-replace');
 
     /* RUN TASKS */
 	grunt.registerTask('default',['sass', 'autoprefixer', 'liquid', 'import']);
 	grunt.registerTask('server',['browserSync', 'watch']);
 
-    grunt.registerTask('master',['sass', 'autoprefixer', 'replace']);
+    /* STAGING TASKS */
+    grunt.registerTask('glpglobal',['sass', 'autoprefixer', 'copy:main', 'replace:glpglobal']);
+    grunt.registerTask('glpbrand',['sass', 'autoprefixer', 'copy:glpbrandCss', 'replace:glpbrand']);
+
 }

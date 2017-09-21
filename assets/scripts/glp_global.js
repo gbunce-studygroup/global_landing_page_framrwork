@@ -1,4 +1,3 @@
-// TO KEEP THE OUTPUT FILE SIZE DOWN COMMENT OUT COMPONENTS THAT DON'T GET USED
 @import "components/affix.js";
 @import "components/alert.js";
 @import "components/button.js";

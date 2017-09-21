@@ -1,4 +1,6 @@
 @import "bootstrap"; 				// _bootstrap.scss
+@import "font-awesome"; 			// _font-awesome.scss
+
 header{
 	.col-md-6{
 		&.affix{
@@ -56,3 +58,5 @@ header{
 		}
 	}
 }
+
+@import "global_components"; 		// Global components _brand_components.scss

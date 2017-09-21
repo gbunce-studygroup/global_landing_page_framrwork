@@ -1,0 +1,25 @@
+/* LANGUAGE LINKS COMPONENT */
+.language_links_v2{ //ul
+	@include component_margin;
+	text-align: $language_select_float;
+	li{ //.dropdown
+		a{
+			color: $a_colour;
+			&:hover, &:active, &:focus{
+				color: $a_colour_hover;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

@@ -35,8 +35,6 @@ $animate-scss-speed: 1s !default;
             animation-fill-mode: both;
 }
 
-
-
 @mixin cta_shared_styles{
     border-style: solid;
     display: inline-block;
@@ -53,12 +51,15 @@ $animate-scss-speed: 1s !default;
     border-width: $cta_primary_border_width;
     border-color: $cta_primary_border_colour;
     border-radius: $cta_primary_border_radius;
-    &:hover, &:active, &:focus{
-        outline: 0;
+    &:hover{
         text-decoration: none;
         background: $cta_primary_background_colour_hover;
         color: $cta_primary_text_colour_hover;
         border-color: $cta_primary_border_colour_hover;
+    }
+    &:active, &:focus{
+        text-decoration: none;
+        outline: 0;
     }
 }
 
@@ -70,12 +71,15 @@ $animate-scss-speed: 1s !default;
     border-width: $cta_secondary_border_width;
     border-color: $cta_secondary_border_colour;
     border-radius: $cta_secondary_border_radius;
-    &:hover, &:active, &:focus{
-        outline: 0;
+    &:hover{
         text-decoration: none;
         background: $cta_secondary_background_colour_hover;
         color: $cta_secondary_text_colour_hover;
         border-color: $cta_secondary_border_colour_hover;
+    }
+    &:active, &:focus{
+        text-decoration: none;
+        outline: 0;
     }
 }
 
@@ -103,13 +107,12 @@ $animate-scss-speed: 1s !default;
 
 // CONTENT BOX, TABS, ACCORDION & BLOG ARTICLE TEXT STYLES
 @mixin content_text_styles{
-
     h1, h2, h3, h4, h5, h6, p, ul, ol{
         margin: 0 0 (nth($component_margin, 3) / 2.5) 0;
     }
 
     ul, ol{
-        padding: 0 0 0 17px;
+        padding: 0 0 0 34px;
     }
 
     h1{
@@ -146,6 +149,13 @@ $animate-scss-speed: 1s !default;
         font-size: $h6_size;
         line-height: $h6_line_height;
         color: $h6_colour;
+    } 
+
+    @media (max-width: $screen-sm-max){
+        h1{
+            font-size: $h1_size / 1.5;
+            line-height: $h1_line_height / 1.5;
+        }
     }
 
     p, ul, ol{

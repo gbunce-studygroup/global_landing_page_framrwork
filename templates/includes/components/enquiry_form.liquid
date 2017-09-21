@@ -18,7 +18,6 @@
             <input class="form-control required" data-bind="field: Model.LastName" data-sg-unique-elem-seq="2" id="lastName" maxlength="50" type="text">
         </div>
     </div>
-
     <div class="form-group has-error">
         <div class="col-md-5 control-label">
             <label for="dateOfBirth">Date of Birth<sup class="required">&nbsp;*</sup></label>
@@ -31,21 +30,6 @@
                     <sup class="required">&nbsp;*</sup>
                 </label>
                 <span class="help-block validation-msg">This is a required field</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div id="datetimepicker1" class="col-md-5 control-label">
-            <label for="dateOfBirth">Date of Birth <sup class="required">&nbsp;*</sup></label>
-        </div>
-        <div class="col-md-7 controls">
-            <div class="input-group date date-picker">
-                <input id="dateOfBirth" name="date_of_birth" data-bind="field: Model.DateOfBirth" class="form-control datepicker required" placeholder="MM/DD/YYYY" data-sg-unique-elem-seq="4" type="text">
-                <label for="dateOfBirth" class="input-group-addon btn">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                    <sup class="required">&nbsp;*</sup>
-                </label>
             </div>
         </div>
     </div>
@@ -79,9 +63,6 @@
             </select>
         </div>
     </div>
-
-
-
     <div class="form-group" data-bind="visible: Model.PrimaryPhoneType() == 'Landline'" style="">
         <div class="col-md-5">
             <label class="control-label" for="telephoneNumber"></label>
@@ -115,9 +96,6 @@
             </div>
         </div>
     </div>
-
-
-
     <div class="form-group">
         <div class="col-md-5 control-label">
             <label for="email">Email <sup class="required">&nbsp;*</sup></label>
@@ -183,11 +161,26 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-md-5 control-label"></div>
+        <div class="col-md-5 control-label">
+            <label for="privacyPolicyYes">
+                Subscribe
+                <sup class="required">&nbsp;*</sup>
+            </label>
+        </div>
+
         <div class="col-md-7 controls">
-            <label for="privacyPolicy"><span>Select yes or no to receive further marketing communications from us. You can unsubscribe at any time and your e-mail remains confidential.</span></label>
+            <label>
+                <span>Select yes or no to receive further marketing communications from us. You can unsubscribe at any time and your e-mail remains confidential.</span>
+            </label>
             <div>
-                <label class="radio-inline"><input class="required" data-bind="field: Model.NewsletterSubscribe" id="field-element-118" name="privacyPolicy" required="" type="radio" value="true"> Yes</label> <label class="radio-inline"><input class="required" data-bind="field: Model.NewsletterSubscribe" id="field-element-119" name="privacyPolicy" required="" type="radio" value="false"> No</label>
+                <label class="radio-inline">
+                    <input id="privacyPolicyYes" data-bind="field: Model.NewsletterSubscribe" name="privacyPolicy" value="true" class="form-control required" data-sg-unique-elem-seq="4" type="radio">
+                    Yes
+                </label>
+                <label class="radio-inline">
+                    <input id="privacyPolicyNo" data-bind="field: Model.NewsletterSubscribe" name="privacyPolicy" value="false" class="form-control required" data-sg-unique-elem-seq="5" type="radio">
+                    No
+                </label>
             </div>
         </div>
     </div>

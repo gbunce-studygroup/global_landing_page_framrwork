@@ -1,0 +1,104 @@
+/* HERO COMPONENT */
+.hero{ // BACKGROUND IMAGE GET ADDED TO '.hero' DIV VIA SITECORE
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+	}
+	.container{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		&.position_left, &.position_right{
+			top: 0;
+			bottom: 0;
+			.row{
+				height: 100%;
+				width: 45%;
+				[class*=col]{
+					display: table;
+					height: 100%;
+					padding-left: 15px;
+					padding-right: 15px;
+					.hero_content{
+						background: none;
+						text-align: left;
+						display: table-cell;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+		&.position_right{
+			.row{
+				float: right;
+			}
+		}
+		[class*=col]{
+			padding-left: 0;
+			padding-right: 0;
+			.hero_content{
+				text-align: center;
+				h1, h2, h3, h4, h5, h6, p, ul, ol, small{
+					margin: 0 0 20px 0;
+				}
+				h1, h2, h3, h4, h5, h6{
+					line-height: 1.1;
+				}
+				p{
+					line-height: 1.42857;
+				}
+				.button{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.hero{
+		&:after{
+			display: none;
+		}
+		.image_size_placeholder{
+			//padding: 48% 0 0;
+			height: 0;
+		}
+		.container,
+		.container.position_left,
+		.container.position_right{
+			position: relative;
+			bottom: auto;
+			.row{
+				float: none;
+				width: auto;
+				[class*=col]{
+					width: 100%;
+					.hero_content{
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

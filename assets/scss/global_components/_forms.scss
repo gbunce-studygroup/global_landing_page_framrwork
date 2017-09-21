@@ -1,0 +1,207 @@
+/* ENQUIRY FORM COMPONENT */
+.form-horizontal{
+	.form-group{
+		.control-label{ //col-md-5
+			label{
+				sup.required{
+					color: red;
+				}
+			}
+		}
+		.controls{ //col-md-7
+			.date-picker{ // datepicker form field
+				.datepicker{
+					width: 40%;
+					display: inline;
+				}
+				.input-group-addon{
+					width: auto;
+					sup{
+                        display: none;
+					}
+				}
+			}
+            label{
+                &.radio-inline{
+                    input{
+                        bottom: -7px;
+                        margin-left: -20px;
+                        width: auto;
+                    }
+                }
+            }
+		}
+		// validation styles
+		&.has-error{
+			margin-bottom: 35px;
+			.help-block, .control-label, .radio, .checkbox, .radio-inline, .checkbox-inline{
+				color: red;
+			}
+			.help-block{
+				margin-bottom: 0;
+				display: block;
+				position: absolute;
+				left: 15px;
+			}
+			.date-picker{
+				.help-block{
+					left: 0;
+				}
+			}
+			.form-control{
+				border-color: red;
+			}
+			.input-group-addon{
+				border-color: red;
+				border-left: none;
+				border-radius: 0 4px 4px 0;
+				.glyphicon{
+					color: #a94442;
+				}
+			}
+		}
+	}
+}
+
+// popup from styles
+.modal{
+    &.form-popup{
+        .modal-dialog{
+            .modal-content{
+                .modal-body{
+                    height: auto;
+                    padding: 0;
+                    .form-horizontal{
+                        max-width: 1140px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Datepick - dropdown
+.datepicker{
+    min-width: 240px;
+    display: none;
+    .datepicker-days,
+    .datepicker-months,
+    .datepicker-years{
+        padding: 5px 5px 0 5px;
+        .table-condensed{ //table
+            width: 100%;
+            thead{
+                tr{
+                    &:first-child{
+                        th{
+                            padding-bottom: 5px;
+                        }
+                    }
+                    th{
+                        &.prev{
+                            .glyphicon{}
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        &.switch{
+                            text-align: center;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        &.next{
+                            text-align: right;
+                            .glyphicon{}
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        &.dow{
+                            color: #fff;
+                            padding: 3px 5px;
+                            text-align: center;
+                            border-right: 1px solid #fff;
+                            border-bottom: 1px solid #fff;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        &.day{
+                            padding: 5px 5px 2px 5px;
+                            text-align: center;
+                            &.active{
+                                color: #fff;
+                            }
+                            &.old{
+                                pointer-events: none;
+                            }
+                            &.new{}
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        span.month,
+                        span.year{
+                            padding: 5px 5px 2px 5px;
+                            display: inline-block;
+                            text-align: center;
+                            width: 33.33%;
+                            text-align: center;
+                            &.active{
+                                color: #fff;
+                            }
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .datepicker-days{
+    	padding: 0 5px;
+    }
+    .datepicker-months,       
+    .datepicker-years{
+        max-width: 240px;
+    }
+    .datepicker-years{
+        .table-condensed{ //table
+            thead{
+                tr{
+                    th{
+                        &.switch{
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.form-horizontal{
+		.form-group{
+			.control-label{ //col-md-5
+				text-align: left;
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}
