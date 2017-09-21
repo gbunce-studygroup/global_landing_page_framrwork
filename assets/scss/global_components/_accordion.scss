@@ -1,0 +1,65 @@
+/* ACCORDION COMPONENT */
+.accordion{
+    .panel-group{
+        margin-bottom: 0;
+        .panel{
+            box-shadow: none;
+            background: none;
+            h1, h2, h3, h4, h5, h6{
+                margin: 0 0 10px 0;
+            }
+            .panel-heading{
+                padding: 0;
+                border: none;
+                .panel-title{
+                    h1, h2, h3, h4, h5, h6{
+                        margin: 0;
+                        text-align: left;
+                        a{
+                            display: block;
+                            padding-right: 40px;
+                            position: relative;
+                            &:hover, &:active, &:focus{
+                                text-decoration: none;
+                            }
+                            &:active, &:focus{
+                                outline: 0;
+                            }
+                            &:after{
+                                @include fa-icon;
+                                content: "\f068"; // Font Awesome close icon http://fontawesome.io/cheatsheet/
+                                position: absolute;
+                                top: 50%;
+                                right: 15px;
+                                transform: translateY(-50%);
+                            }
+                            &.collapsed{
+                                &:after{
+                                    content: "\f067"; // Font Awesome open icon http://fontawesome.io/cheatsheet/
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .panel-body{
+                border: none;
+                h1, h2, h3, h4, h5, h6{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

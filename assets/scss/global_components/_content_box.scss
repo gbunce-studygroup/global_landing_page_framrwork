@@ -1,0 +1,33 @@
+/* CONTENT BOX COMPONENT */
+.content_box{
+	header &{
+		.button{
+			text-align: right;
+		}
+	}
+	.affix &{
+		margin: 10px 0;
+		.button{
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.content_box{
+		header &{
+			.button{
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

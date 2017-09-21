@@ -41,7 +41,23 @@ $(".row .widget, .row .pullout").parent().addClass('col_flex');
 $(".col_flex").parent().addClass('row_flex');
 $(".disable_flex").parent().removeClass('col_flex');
 
-
 // Align carousel content to the middle of the content box
 $( "[class*=col] > .carousel .carousel-caption" ).wrapInner( "<div class='vertical_align'></div>");
 $( ".vertical_align" ).wrapInner( "<div class='vertical_align_inner'></div>");
+
+// Jump link scroll script
+$(document).ready(function(){
+	$('.content_box a[href^="#"]').on('click',function (e){
+	    e.preventDefault();
+	    var target = this.hash;
+	    var $target = $(target);
+		$('html, body').stop().animate({
+		     'scrollTop': $target.offset().top
+		}, 900, 'swing');
+	});
+});
+
+//  SWAP ORDER OF THE IMAGE AND THE TITLE IN THE WIDGET COMPONENT
+$('.widget img').each(function(){
+    $(this).insertBefore( $(this).prev('h1, h2, h3, h4, h5, h6'));
+});

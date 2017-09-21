@@ -1,0 +1,23 @@
+/* MAIN LOGO COMPONENT */
+.logo{}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.logo{
+		text-align: center;
+	}
+}
+
+@media (max-width: $screen-xs-max){
+	.logo{
+		img{
+			max-width: 200px;
+			height: auto;
+		}
+	}
+}
