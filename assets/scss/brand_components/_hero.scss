@@ -103,6 +103,18 @@
 			}
 		}
 		.container{
+		  	@if $hero_content_fluid_layout == none{
+		  		&.position_left{
+		  			.row{
+		  				margin-left: -15px;
+		  			}
+		  		}
+		  		&.position_right{
+		  			.row{
+		  				margin-right: -15px;
+		  			}
+		  		}
+		  	}
 			[class*=col]{
 				.hero_content{
 					margin-bottom: 0;

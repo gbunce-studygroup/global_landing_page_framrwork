@@ -4,9 +4,9 @@
 	text-align: $language_select_float;
 	li{ //.dropdown
 		a{
-			color: $a_colour;
+			color: $language_select_text_colour;
 			&:hover, &:active, &:focus{
-				color: $a_colour_hover;
+				color: $language_select_text_colour;
 			}
 		}
 	}

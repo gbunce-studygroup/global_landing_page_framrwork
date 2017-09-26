@@ -10,6 +10,7 @@
 			a{
 				font-size: $icon_size;
 				color: $icon_colour;
+				@include app-transition(all, .4s, ease);
 				&:hover, &:active, &:focus{
 					color: $icon_colour_hover;
 					opacity: $icon_opacity_hover;

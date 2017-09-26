@@ -250,63 +250,6 @@ footer {
   overflow-x: scroll;
 }
 
-/* BUTTON GROUP COMPONENT */
-.button-group {
-  margin: 0 0 0 0;
-}
-.button-group ul li a {
-  border-style: solid;
-  display: inline-block;
-  text-align: center;
-  padding: 10px 20px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  background: none;
-  color: #000;
-  border-width: 2px;
-  border-color: #000;
-  border-radius: 5px;
-}
-.button-group ul li a:hover {
-  text-decoration: none;
-  background: #000;
-  color: #fff;
-  border-color: #000;
-}
-.button-group ul li a:active, .button-group ul li a:focus {
-  text-decoration: none;
-  outline: 0;
-}
-.button-group ul li:last-child a {
-  border-style: solid;
-  display: inline-block;
-  text-align: center;
-  padding: 10px 20px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  background: #000;
-  color: #fff;
-  border-width: 2px;
-  border-color: #000;
-  border-radius: 5px;
-}
-.button-group ul li:last-child a:hover {
-  text-decoration: none;
-  background: #fff;
-  color: #000;
-  border-color: #000;
-}
-.button-group ul li:last-child a:active, .button-group ul li:last-child a:focus {
-  text-decoration: none;
-  outline: 0;
-}
-
 /* CAROUSEL COMPONENT */
 .carousel {
   margin: 0 0 30px 0;
@@ -929,6 +872,12 @@ footer {
     background: black;
     padding: 20px;
   }
+  .hero .container.position_left .row {
+    margin-left: -15px;
+  }
+  .hero .container.position_right .row {
+    margin-right: -15px;
+  }
   .hero .container [class*=col] .hero_content {
     margin-bottom: 0;
   }
@@ -942,7 +891,7 @@ footer {
   color: #000;
 }
 .language_links_v2 li a:hover, .language_links_v2 li a:active, .language_links_v2 li a:focus {
-  color: #666;
+  color: #000;
 }
 
 /* MAIN LOGO COMPONENT */
@@ -982,6 +931,11 @@ footer {
 .social_media_wrapper .social_media li a {
   font-size: 30px;
   color: #000;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .social_media_wrapper .social_media li a:hover, .social_media_wrapper .social_media li a:active, .social_media_wrapper .social_media li a:focus {
   color: #000;

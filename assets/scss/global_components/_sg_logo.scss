@@ -1,6 +1,14 @@
 /* SG LOGO COMPONENT */
 .sg_logo{
 	text-align: right;
+	p{
+		a{
+			img{
+				width: 130px;
+				height: auto;
+			}
+		}
+	}
 }
 
 @media (min-width: $screen-lg-min){
