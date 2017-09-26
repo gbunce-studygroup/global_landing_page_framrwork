@@ -9780,31 +9780,6 @@ header .col-md-6.affix .language_links_v2 {
   text-align: left;
 }
 
-/* BUTTON GROUP COMPONENT */
-.button-group {
-  text-align: right;
-}
-.button-group ul {
-  margin: 0;
-  padding: 0;
-}
-.button-group ul li {
-  display: inline-block;
-  margin: 0 5px;
-}
-.button-group ul li a {
-  display: block;
-}
-.affix .button-group {
-  text-align: center;
-  margin: 10px 0;
-}
-
-@media (max-width: 991px) {
-  .button-group {
-    text-align: center;
-  }
-}
 /* CAROUSEL COMPONENT */
 .carousel .carousel-indicators {
   bottom: 10px;
@@ -9858,6 +9833,7 @@ header .col-md-6.affix .language_links_v2 {
     top: 50%;
     transform: translateY(-50%);
     text-shadow: none;
+    z-index: 10;
   }
   .carousel .carousel-control.left:after {
     content: "\f053";
@@ -9874,6 +9850,7 @@ header .col-md-6.affix .language_links_v2 {
     right: auto;
     width: 100%;
     text-align: center;
+    padding: 20px 40px;
   }
 }
 /* CONTENT BOX COMPONENT */
@@ -10463,6 +10440,10 @@ header .content_box .button {
 .sg_logo {
   text-align: right;
 }
+.sg_logo p a img {
+  width: 130px;
+  height: auto;
+}
 
 @media (max-width: 991px) {
   .sg_logo {
@@ -10501,8 +10482,23 @@ header .content_box .button {
 .tab_wrapper .nav-tabs li.active h1 a:hover, .tab_wrapper .nav-tabs li.active h1 a:active, .tab_wrapper .nav-tabs li.active h1 a:focus, .tab_wrapper .nav-tabs li.active h2 a:hover, .tab_wrapper .nav-tabs li.active h2 a:active, .tab_wrapper .nav-tabs li.active h2 a:focus, .tab_wrapper .nav-tabs li.active h3 a:hover, .tab_wrapper .nav-tabs li.active h3 a:active, .tab_wrapper .nav-tabs li.active h3 a:focus, .tab_wrapper .nav-tabs li.active h4 a:hover, .tab_wrapper .nav-tabs li.active h4 a:active, .tab_wrapper .nav-tabs li.active h4 a:focus, .tab_wrapper .nav-tabs li.active h5 a:hover, .tab_wrapper .nav-tabs li.active h5 a:active, .tab_wrapper .nav-tabs li.active h5 a:focus, .tab_wrapper .nav-tabs li.active h6 a:hover, .tab_wrapper .nav-tabs li.active h6 a:active, .tab_wrapper .nav-tabs li.active h6 a:focus, .tab_wrapper .nav-tabs li.active p a:hover, .tab_wrapper .nav-tabs li.active p a:active, .tab_wrapper .nav-tabs li.active p a:focus {
   text-decoration: none;
 }
+.col-md-6 .tab_wrapper, .col-md-7 .tab_wrapper, .col-md-8 .tab_wrapper {
+  /* TABS WIDGET COMPONENT */
+}
+.col-md-6 .tab_wrapper .tab_ul_overflow, .col-md-7 .tab_wrapper .tab_ul_overflow, .col-md-8 .tab_wrapper .tab_ul_overflow {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.col-md-6 .tab_wrapper .tab_ul_overflow .nav-tabs, .col-md-7 .tab_wrapper .tab_ul_overflow .nav-tabs, .col-md-8 .tab_wrapper .tab_ul_overflow .nav-tabs {
+  display: inline-block;
+}
+.col-md-6 .tab_wrapper .tab_ul_overflow .nav-tabs li, .col-md-7 .tab_wrapper .tab_ul_overflow .nav-tabs li, .col-md-8 .tab_wrapper .tab_ul_overflow .nav-tabs li {
+  float: none;
+  display: inline-block;
+}
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   /* TABS WIDGET COMPONENT */
   .tab_wrapper .tab_ul_overflow {
     white-space: nowrap;
