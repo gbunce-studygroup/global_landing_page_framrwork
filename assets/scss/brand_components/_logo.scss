@@ -1,6 +1,10 @@
 /* MAIN LOGO COMPONENT */
 .logo{
 	margin: $logo_margin;
+	img{
+		max-width: $logo_max_width;
+		max-height: $logo_max_height;
+	}
 }
 
 @media (min-width: $screen-lg-min){

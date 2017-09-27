@@ -16,7 +16,7 @@
 @media (max-width: $screen-xs-max){
 	.logo{
 		img{
-			max-width: 200px;
+			max-width: 200px !important;
 			height: auto;
 		}
 	}

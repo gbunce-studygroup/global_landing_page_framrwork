@@ -10424,7 +10424,7 @@ header .content_box .button {
 }
 @media (max-width: 767px) {
   .logo img {
-    max-width: 200px;
+    max-width: 200px !important;
     height: auto;
   }
 }
