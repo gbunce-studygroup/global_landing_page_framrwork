@@ -7,6 +7,7 @@
 	h1, h2, h3, h4, h5, h6{
 		&:first-child{
 			font-size: $component_title_size;
+			color: $testimonial_text_colour;
 		}
 	}
 	img{
@@ -19,6 +20,9 @@
 	}
 	.testimonial_info{
 		@include content_text_styles;
+		p{
+			color: $testimonial_text_colour;
+		}
 	}
 }
 

@@ -1066,6 +1066,7 @@ footer {
 }
 .testimonial h1:first-child, .testimonial h2:first-child, .testimonial h3:first-child, .testimonial h4:first-child, .testimonial h5:first-child, .testimonial h6:first-child {
   font-size: 25px;
+  color: #000;
 }
 .testimonial img {
   margin: 0 0 20px 0;
@@ -1150,6 +1151,9 @@ footer {
 .testimonial .testimonial_info .table_overflow {
   width: 100%;
   overflow-x: scroll;
+}
+.testimonial .testimonial_info p {
+  color: #000;
 }
 
 @media (max-width: 991px) {
