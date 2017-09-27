@@ -655,6 +655,9 @@ footer {
 .gallery .modal .modal-dialog .modal-content .modal-body {
   /* GALLERY CAROUSEL COMPONENT */
 }
+.gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption {
+  color: #000;
+}
 .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h1 {
   font-size: 36px;
   line-height: 46px;
@@ -695,17 +698,6 @@ footer {
   color: #666;
 }
 
-@media (max-width: 991px) {
-  .gallery {
-    /* GALLERY LIGHTBOX */
-  }
-  .gallery .modal .modal-dialog .modal-content .modal-body {
-    /* GALLERY CAROUSEL COMPONENT */
-  }
-  .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption {
-    color: #000;
-  }
-}
 /* HERO COMPONENT */
 .hero {
   height: 450px;
@@ -1152,7 +1144,7 @@ footer {
   width: 100%;
   overflow-x: scroll;
 }
-.testimonial .testimonial_info p {
+.testimonial .testimonial_info p, .testimonial .testimonial_info a, .testimonial .testimonial_info a:hover {
   color: #000;
 }
 
