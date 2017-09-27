@@ -899,7 +899,7 @@ footer {
   margin: 0 0 0 0;
 }
 .logo img {
-  max-width: 300px;
+  max-width: auto;
   max-height: auto;
 }
 
