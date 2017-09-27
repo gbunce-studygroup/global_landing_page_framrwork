@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none',
                 },
                 files: {
-                    'html/css/glp_brandname.css':'assets/scss/glp_brandname.scss',
+                    'html/css/glp_brand.css':'assets/scss/glp_brand.scss',
                     'html/css/glp_global.css':'assets/scss/glp_global.scss'
                 }
             }
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'html/js/glp_global.js' : 'assets/scripts/glp_global.js',
-                    'html/js/glp_brandname.js' : 'assets/scripts/glp_brandname.js'
+                    'html/js/glp_brand.js' : 'assets/scripts/glp_brand.js'
                 }
             }
         },
@@ -126,7 +126,7 @@ module.exports = function(grunt) {
                 {
                     expand: true, 
                     flatten: true,
-                    src: ['html/css/glp_brandname.css'], 
+                    src: ['html/css/glp_brand.css'], 
                     dest: '///Volumes/Designer/css/globallandingpagesv2/', // CHANGE TO MATCH THE CSS LOCATION ON STAGING
                     filter: 'isFile'
                 }],
@@ -148,7 +148,7 @@ module.exports = function(grunt) {
                 }]
             },
             glpbrand: {
-                src: ['///Volumes/Designer/css/globallandingpagesv2/glp_brandname.css'], // CHANGE TO MATCH THE CSS LOCATION ON STAGING
+                src: ['///Volumes/Designer/css/globallandingpagesv2/glp_brand.css'], // CHANGE TO MATCH THE CSS LOCATION ON STAGING
                 overwrite: true, // overwrite matched source files 
                 replacements: [{
                     from: '../fonts/',
