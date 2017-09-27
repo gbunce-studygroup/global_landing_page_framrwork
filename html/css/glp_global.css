@@ -10197,17 +10197,19 @@ header .content_box .button {
 }
 .gallery .modal .modal-dialog .modal-content .modal-body {
   /* GALLERY CAROUSEL COMPONENT */
+  overflow: visible;
 }
 .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item img {
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption {
-  position: absolute;
+  position: relative;
+  text-shadow: none;
   background: none;
   bottom: 20px;
   left: 25%;
   right: 25%;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   text-align: center;
   top: auto;
 }
@@ -10241,18 +10243,15 @@ header .content_box .button {
   }
   .gallery .modal .modal-dialog .modal-content .modal-body {
     /* GALLERY CAROUSEL COMPONENT */
-    overflow: visible;
   }
   .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption {
-    position: relative;
     left: auto;
     right: auto;
-    text-shadow: none;
     margin: 25px auto 0;
-    width: 60%;
+    width: 75%;
   }
   .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-control {
-    top: auto;
+    top: 60%;
     bottom: 0;
     transform: none;
   }

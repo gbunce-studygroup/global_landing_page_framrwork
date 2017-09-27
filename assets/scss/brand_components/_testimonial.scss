@@ -20,7 +20,7 @@
 	}
 	.testimonial_info{
 		@include content_text_styles;
-		p{
+		p, a, a:hover{
 			color: $testimonial_text_colour;
 		}
 	}

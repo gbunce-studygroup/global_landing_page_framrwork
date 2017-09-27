@@ -41,6 +41,7 @@
 						.carousel-inner{
 							.item{
 								.carousel-caption{
+									color: $main_colour;
 									h1{
 										font-size: $h1_size;
 										line-height: $h1_line_height;
@@ -97,27 +98,6 @@
 }
 
 @media (max-width: $screen-sm-max){
-	.gallery{
-		/* GALLERY LIGHTBOX */
-		.modal{
-			.modal-dialog{
-				.modal-content{
-					.modal-body{
-						/* GALLERY CAROUSEL COMPONENT */
-						.carousel{
-							.carousel-inner{
-								.item{
-									.carousel-caption{
-										color: $main_colour;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}	
 }
 
 @media (max-width: $screen-xs-max){
