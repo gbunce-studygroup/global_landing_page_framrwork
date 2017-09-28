@@ -34,15 +34,11 @@ $sticky_header_shadow:					 0px 0px 12px 0px rgba(0,0,0,0.08) !default;
 // Language select
 $language_select_text_colour:     		 $main_colour !default;
 $language_select_font_size:       		 12px !default;
-$language_select_float:					 right !default;
 
 // Logo
 $logo_margin:                            0 0 0 0 !default;
-$logo_max_width:						 auto !default;
-$logo_max_height:						 auto !default;
-
-// Button group
-$button_group_margin:					 0 0 0 0 !default;
+$logo_max_width:						 none !default;
+$logo_max_height:						 none !default;
 
 // ************************************** FOOTER ************************************** //
 
@@ -178,7 +174,6 @@ $gallery_icon_colour:							#fff !default;
 $gallery_image_overlay:							rgba(0, 0, 0, 0.2) !default;
 $gallery_image_overlay_hover:					rgba(0, 0, 0, 0.1) !default;
 $gallery_carousel_arrow_colour:					$a_colour !default;
-$gallery_carousel_text_colour:					#fff !default;
 $gallery_carousel_arrow_colour_hover:			$a_colour_hover !default;
 
 // Hero image
@@ -232,7 +227,7 @@ $testimonial_padding:							10px !default;
 $testimonial_text_align:						center !default;
 $testimonial_text_colour:						$main_colour !default;
 $testimonial_text_size:							20px !default;
-$testimonial_text_light_height:					30px !default;
+$testimonial_text_line_height:					30px !default;
 
 // Video
 $video_text_align:								center !default;

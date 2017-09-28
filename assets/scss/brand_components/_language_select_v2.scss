@@ -1,7 +1,6 @@
 /* LANGUAGE LINKS COMPONENT */
 .language_links_v2{ //ul
-	@include component_margin;
-	text-align: $language_select_float;
+	margin-bottom: (nth($header_padding, 1));
 	li{ //.dropdown
 		a{
 			color: $language_select_text_colour;

@@ -16,7 +16,7 @@
 	.testimonial_content{
 		color: $testimonial_text_colour;
 		font-size: $testimonial_text_size;
-		line-height: $testimonial_text_light_height;
+		line-height: $testimonial_text_line_height;
 	}
 	.testimonial_info{
 		@include content_text_styles;
