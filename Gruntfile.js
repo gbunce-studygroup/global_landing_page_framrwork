@@ -140,7 +140,7 @@ module.exports = function(grunt) {
                 src: ['///Volumes/Designer/css/globallandingpagesv2/glp_global.css'], // CHANGE TO MATCH THE CSS LOCATION ON STAGING
                 overwrite: true, // overwrite matched source files 
                 replacements: [{
-                    from: '../fonts/custom_font/',
+                    from: '../fonts/',
                     to: "/fonts/globallandingpagesv2/global/" // CHANGE TO MATCH THE FONTS LOCATION ON STAGING
                 }, {
                     from: '../img/',
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
                 src: ['///Volumes/Designer/css/globallandingpagesv2/glp_brand.css'], // CHANGE TO MATCH THE CSS LOCATION ON STAGING
                 overwrite: true, // overwrite matched source files 
                 replacements: [{
-                    from: '../fonts/',
+                    from: '../fonts/custom_font/',
                     to: "/fonts/globallandingpagesv2/global/" // CHANGE TO MATCH THE FONTS LOCATION ON STAGING
                 }, {
                     from: '../img/',
