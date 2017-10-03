@@ -4,8 +4,16 @@
 	li{ //.dropdown
 		a{
 			color: $language_select_text_colour;
+			font-size: $language_select_font_size;
 			&:hover, &:active, &:focus{
 				color: $language_select_text_colour;
+			}
+		}
+		ul{
+			li{
+				a, a:hover{
+					color: $main_colour;
+				}
 			}
 		}
 	}
