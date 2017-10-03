@@ -880,8 +880,12 @@ footer {
 }
 .language_links_v2 li a {
   color: #000;
+  font-size: 12px;
 }
 .language_links_v2 li a:hover, .language_links_v2 li a:active, .language_links_v2 li a:focus {
+  color: #000;
+}
+.language_links_v2 li ul li a, .language_links_v2 li ul li a:hover {
   color: #000;
 }
 
