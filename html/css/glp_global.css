@@ -9868,6 +9868,9 @@ header .content_box .button {
   header .content_box .button {
     text-align: center;
   }
+  footer .content_box {
+    text-align: center;
+  }
 }
 /* COOKIE BAR COMPONENT */
 .cookie-bar {
@@ -9985,6 +9988,16 @@ header .content_box .button {
   margin-left: -20px;
   width: auto;
 }
+.form-horizontal .form-group .col-md-7 .row .col-sm-2 {
+  width: 18.66667%;
+  padding-right: 0;
+}
+.form-horizontal .form-group .col-md-7 .row .col-sm-8 {
+  width: 62.66667%;
+}
+.form-horizontal .form-group .col-md-7 .row .col-sm-10 {
+  width: 81.33334%;
+}
 .form-horizontal .form-group.has-error {
   margin-bottom: 35px;
 }
@@ -10012,17 +10025,20 @@ header .content_box .button {
   color: #a94442;
 }
 
-.modal.form-popup .modal-dialog .modal-content .modal-body {
-  height: auto;
-  padding: 0;
+.modal.form-popup .modal-dialog {
+  width: auto;
+  max-width: 800px;
 }
-.modal.form-popup .modal-dialog .modal-content .modal-body .form-horizontal {
-  max-width: 1140px;
-  margin: 0 auto;
+.modal.form-popup .modal-dialog .modal-content {
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.modal.form-popup .modal-dialog .modal-content .modal-body {
+  padding: 15px;
 }
 
 .datepicker {
-  min-width: 240px;
+  min-width: 225px;
   display: none;
 }
 .datepicker .datepicker-days,
@@ -10138,6 +10154,20 @@ header .content_box .button {
   .form-horizontal .form-group .control-label {
     text-align: left;
   }
+  .form-horizontal .form-group .col-md-7 .row .col-sm-2,
+  .form-horizontal .form-group .col-md-7 .row .col-sm-8,
+  .form-horizontal .form-group .col-md-7 .row .col-sm-10 {
+    float: left;
+  }
+  .form-horizontal .form-group .col-md-7 .row .col-sm-2 {
+    width: 24.66667%;
+  }
+  .form-horizontal .form-group .col-md-7 .row .col-sm-8 {
+    width: 50.66667%;
+  }
+  .form-horizontal .form-group .col-md-7 .row .col-sm-10 {
+    width: 75.33337%;
+  }
 }
 /* GALLERY COMPONENT */
 .gallery {
@@ -10216,21 +10246,22 @@ header .content_box .button {
 .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h1, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h2, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h3, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h4, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h5, .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-inner .item .carousel-caption h6 {
   margin: 0;
 }
-.gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-control {
-  display: block;
+.gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control {
+  display: inline-block;
   background: none;
   opacity: 1;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -65px;
+  width: auto;
 }
-.gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-control i {
+.gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control i {
   font-size: 60px;
   text-shadow: none;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
-.gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-control:after {
+.gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control.right {
+  right: auto;
+  left: 50px;
+}
+.gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control:after {
   display: none;
 }
 
@@ -10248,12 +10279,7 @@ header .content_box .button {
     left: auto;
     right: auto;
     margin: 25px auto 0;
-    width: 75%;
-  }
-  .gallery .modal .modal-dialog .modal-content .modal-body .carousel .carousel-control {
-    top: 60%;
-    bottom: 0;
-    transform: none;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -10568,14 +10594,11 @@ header .content_box .button {
 }
 
 /* VIDEO LIGHTBOX */
-.modal .modal-dialog {
-  width: auto;
-  margin: 15px 50px;
-}
 .modal .modal-dialog .modal-content {
-  background: none;
   box-shadow: none;
+  border-radius: 0;
   border: 0;
+  background-color: transparent;
 }
 .modal .modal-dialog .modal-content .modal-header .close,
 .modal .modal-dialog .modal-content .modal-body .close {
@@ -10586,21 +10609,9 @@ header .content_box .button {
 }
 .modal .modal-dialog .modal-content .modal-header {
   border: 0;
-  padding: 0 0 15px 0;
 }
 .modal .modal-dialog .modal-content .modal-body {
-  padding: 0;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-  overflow: hidden;
-}
-.modal .modal-dialog .modal-content .modal-body iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 85%;
+  padding: 15px 0 0 0;
 }
 
 @media (max-width: 767px) {
