@@ -31,6 +31,20 @@
                 }
             }
 		}
+        .col-md-7{ // phone fields
+            .row{
+                .col-sm-2{
+                    width: 18.66667%;
+                    padding-right: 0;
+                }
+                .col-sm-8{
+                    width: 62.66667%;
+                }
+                .col-sm-10{
+                    width: 81.33334%;
+                }
+            }
+        }
 		// validation styles
 		&.has-error{
 			margin-bottom: 35px;
@@ -67,14 +81,13 @@
 .modal{
     &.form-popup{
         .modal-dialog{
+            width: auto;
+            max-width: 800px;
             .modal-content{
+                background: #fff;
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
                 .modal-body{
-                    height: auto;
-                    padding: 0;
-                    .form-horizontal{
-                        max-width: 1140px;
-                        margin: 0 auto;
-                    }
+                    padding: 15px;
                 }
             }
         }
@@ -83,7 +96,7 @@
 
 // Datepick - dropdown
 .datepicker{
-    min-width: 240px;
+    min-width: 225px;
     display: none;
     .datepicker-days,
     .datepicker-months,
@@ -199,6 +212,24 @@
 			.control-label{ //col-md-5
 				text-align: left;
 			}
+            .col-md-7{ // phone fields
+                .row{
+                    .col-sm-2,
+                    .col-sm-8,
+                    .col-sm-10{
+                        float: left;
+                    }
+                    .col-sm-2{
+                        width: 24.66667%;
+                    }
+                    .col-sm-8{
+                        width: 50.66667%;
+                    }
+                    .col-sm-10{
+                        width: 75.33337%;
+                    }
+                }
+            }
 		}
 	}
 }
