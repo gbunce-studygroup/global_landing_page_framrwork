@@ -1,0 +1,242 @@
+/* RIGHT TO LEFT STYLES */
+html:lang(ar-JO),
+html:lang(fa-IR){
+
+    body{
+        direction: rtl;
+        font-size: 16px;
+    }
+
+    .accordion{
+        .panel-group{
+            .panel{
+                .panel-heading{
+                    .panel-title{
+                        h1, h2, h3, h4, h5, h6{
+                            text-align: right;
+                            a{
+                                padding-left: 40px;
+                                padding-right: 15px;
+                                &:after{
+                                    right: auto;
+                                    left: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .panel-body{
+                    h1, h2, h3, h4, h5, h6{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero{
+        .container{
+            &.position_left, &.position_right{
+                direction: ltr;
+                .row{
+                    [class*=col]{
+                        .hero_content{
+                            text-align: right;
+                            direction: rtl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .language_links_v2,
+    .datepicker,
+    .logo,
+    .social_media_wrapper,
+    .sg_logo{
+        direction: ltr;
+    }
+
+    .widget,
+    .pullout,
+    .testimonial{
+        text-align: right !important;
+    }
+
+    .content_box,
+    .hero_content,
+    .tab_wrapper .tab-content{
+        p, ul, ol{
+            font-size: 16px;
+        }
+        ul, ol{
+            padding: 0 18px 0 0;
+        }
+    }
+
+    .carousel{
+        .carousel-indicators{
+            right: auto;
+            left: 20px;
+            direction: ltr;
+            margin-left: auto;
+        }
+        .carousel-inner{
+            .item{
+                .carousel-caption{
+                    left: 20%;
+                    right: 0;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .tab_wrapper{
+        .nav-tabs{
+            text-align: right;
+            li{
+                &:first-child{
+                    margin-right: -40px;
+                }
+            }
+        }
+        .tab-content{
+            direction: rtl;
+        }
+    }
+
+    .gallery{
+        .modal{
+            .modal-dialog{
+                .modal-content{
+                    .modal-body{
+                        .carousel{
+                            .controls{
+                                .carousel-control{
+                                    &.right{
+                                        right: 0;
+                                        left: auto;
+                                    }
+                                    &.left{
+                                        right: 50px;
+                                        left: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal{
+        .modal-dialog{
+            .modal-content{
+                .modal-header, .modal-body{
+                    .close{
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+
+    // enquiry form
+    .form-horizontal{
+        .form-group{
+            .col-md-7{
+                right: 41.66667%;
+                .row{
+                    .col-sm-2{
+                        padding-right: 15px;
+                        padding-left: 0;
+                    }
+                }
+                .checkbox label{
+                    padding-right: 20px;
+                }
+                .radio label{
+                    padding-right: 0;
+                    margin-right: 20px;
+                    input{
+                        margin-right: -20px;
+                    }
+                }
+                .checkbox input[type="checkbox"],
+                .checkbox-inline input[type="checkbox"]{
+                    margin-right: -20px;
+                }
+                button{
+                    &.pull-right{
+                        float: left !important;
+                    }
+                    &:after {
+                        content:"\f104";
+                        margin: 0 7px 0 0;
+                    }
+                }
+                .radio-inline{
+                    direction: ltr;
+                }
+            }
+            .col-md-5{
+                left: 58.33333%;
+            }
+        }
+    }
+    // date picker
+    .form-horizontal .form-group .controls .date-picker .datepicker{
+        border-radius: 0 4px 4px 0;
+    }
+    .form-horizontal .form-group .controls .date-picker .input-group-addon{
+        border-radius: 4px 0 0 4px;
+        border-left: 1px solid #ccc;
+        border-right: 0;
+    }
+
+    // form validation
+    .form-horizontal .form-group.has-error .controls .date-picker .input-group-addon{
+        border-left: 1px solid red;
+    }
+    .form-horizontal .form-group.has-error .help-block{
+        left: auto;
+        right: 15px;
+    }
+    .form-horizontal .form-group.has-error .controls .date-picker .help-block{
+        right: 0;
+    }
+
+}
+
+@media (min-width: $screen-lg-min){
+    html:lang(ar-JO), html:lang(fa-IR){}
+}
+
+@media (max-width: $screen-md-max){
+    html:lang(ar-JO), html:lang(fa-IR){}
+}
+
+@media (max-width: $screen-sm-max){
+    html:lang(ar-JO), html:lang(fa-IR){
+        .form-horizontal{
+            .form-group{
+                .col-md-7{
+                    right: auto;
+                }
+                .col-md-5{
+                    left: auto;
+                }
+                .control-label{ //col-md-5
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max){
+    html:lang(ar-JO), html:lang(fa-IR){}
+}
