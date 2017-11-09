@@ -61,3 +61,10 @@ $(document).ready(function(){
 $('.widget img').each(function(){
     $(this).insertBefore( $(this).prev('h1, h2, h3, h4, h5, h6'));
 });
+
+// REVERSE ORDER OF THE FORM FIELDS IN RIGHT TO LEFT LANGUAGES
+$('html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .row, html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .row').each(function(){
+	var list = $(this);
+	var listItems = list.children('[class*=col]');
+	list.append(listItems.get().reverse());
+});

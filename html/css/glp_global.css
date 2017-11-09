@@ -9970,6 +9970,9 @@ header .content_box .button {
   }
 }
 /* ENQUIRY FORM COMPONENT */
+.form-horizontal .form-group {
+  font-size: 16px;
+}
 .form-horizontal .form-group .control-label label sup.required {
   color: red;
 }
@@ -9983,10 +9986,13 @@ header .content_box .button {
 .form-horizontal .form-group .controls .date-picker .input-group-addon sup {
   display: none;
 }
+.form-horizontal .form-group .controls label.radio-inline {
+  margin-right: 15px;
+}
 .form-horizontal .form-group .controls label.radio-inline input {
-  bottom: -7px;
   margin-left: -20px;
   width: auto;
+  height: 15px;
 }
 .form-horizontal .form-group .col-md-7 .row .col-sm-2 {
   width: 18.66667%;
@@ -10350,6 +10356,10 @@ header .content_box .button {
 .hero .container [class*=col] .hero_content h1, .hero .container [class*=col] .hero_content h2, .hero .container [class*=col] .hero_content h3, .hero .container [class*=col] .hero_content h4, .hero .container [class*=col] .hero_content h5, .hero .container [class*=col] .hero_content h6 {
   line-height: 1.1;
 }
+.hero .container [class*=col] .hero_content ul, .hero .container [class*=col] .hero_content ol {
+  display: inline-block;
+  list-style-position: inside;
+}
 .hero .container [class*=col] .hero_content p {
   line-height: 1.42857;
 }
@@ -10606,6 +10616,7 @@ header .content_box .button {
   opacity: 1;
   border-style: solid;
   padding: 2px 8px 7px 8px;
+  margin-bottom: 15px;
 }
 .modal .modal-dialog .modal-content .modal-header {
   border: 0;
@@ -10628,4 +10639,231 @@ header .content_box .button {
 .widget .button,
 .pullout .button {
   display: block;
+}
+
+/* RIGHT TO LEFT STYLES */
+html:lang(ar-JO) body,
+html:lang(fa-IR) body {
+  direction: rtl;
+  font-size: 16px;
+}
+html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h1, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h2, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h3, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h4, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h5, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h6,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h1,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h2,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h3,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h4,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h5,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h6 {
+  text-align: right;
+}
+html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h1 a, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h2 a, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h3 a, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h4 a, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h5 a, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h6 a,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h1 a,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h2 a,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h3 a,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h4 a,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h5 a,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h6 a {
+  padding-left: 40px;
+  padding-right: 15px;
+}
+html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h1 a:after, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h2 a:after, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h3 a:after, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h4 a:after, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h5 a:after, html:lang(ar-JO) .accordion .panel-group .panel .panel-heading .panel-title h6 a:after,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h1 a:after,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h2 a:after,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h3 a:after,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h4 a:after,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h5 a:after,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-heading .panel-title h6 a:after {
+  right: auto;
+  left: 15px;
+}
+html:lang(ar-JO) .accordion .panel-group .panel .panel-body h1, html:lang(ar-JO) .accordion .panel-group .panel .panel-body h2, html:lang(ar-JO) .accordion .panel-group .panel .panel-body h3, html:lang(ar-JO) .accordion .panel-group .panel .panel-body h4, html:lang(ar-JO) .accordion .panel-group .panel .panel-body h5, html:lang(ar-JO) .accordion .panel-group .panel .panel-body h6,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-body h1,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-body h2,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-body h3,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-body h4,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-body h5,
+html:lang(fa-IR) .accordion .panel-group .panel .panel-body h6 {
+  text-align: right;
+}
+html:lang(ar-JO) .hero .container.position_left, html:lang(ar-JO) .hero .container.position_right,
+html:lang(fa-IR) .hero .container.position_left,
+html:lang(fa-IR) .hero .container.position_right {
+  direction: ltr;
+}
+html:lang(ar-JO) .hero .container.position_left .row [class*=col] .hero_content, html:lang(ar-JO) .hero .container.position_right .row [class*=col] .hero_content,
+html:lang(fa-IR) .hero .container.position_left .row [class*=col] .hero_content,
+html:lang(fa-IR) .hero .container.position_right .row [class*=col] .hero_content {
+  text-align: right;
+  direction: rtl;
+}
+html:lang(ar-JO) .language_links_v2,
+html:lang(ar-JO) .datepicker,
+html:lang(ar-JO) .logo,
+html:lang(ar-JO) .social_media_wrapper,
+html:lang(ar-JO) .sg_logo,
+html:lang(fa-IR) .language_links_v2,
+html:lang(fa-IR) .datepicker,
+html:lang(fa-IR) .logo,
+html:lang(fa-IR) .social_media_wrapper,
+html:lang(fa-IR) .sg_logo {
+  direction: ltr;
+}
+html:lang(ar-JO) .widget,
+html:lang(ar-JO) .pullout,
+html:lang(ar-JO) .testimonial,
+html:lang(fa-IR) .widget,
+html:lang(fa-IR) .pullout,
+html:lang(fa-IR) .testimonial {
+  text-align: right !important;
+}
+html:lang(ar-JO) .content_box p, html:lang(ar-JO) .content_box ul, html:lang(ar-JO) .content_box ol,
+html:lang(ar-JO) .hero_content p,
+html:lang(ar-JO) .hero_content ul,
+html:lang(ar-JO) .hero_content ol,
+html:lang(ar-JO) .tab_wrapper .tab-content p,
+html:lang(ar-JO) .tab_wrapper .tab-content ul,
+html:lang(ar-JO) .tab_wrapper .tab-content ol,
+html:lang(fa-IR) .content_box p,
+html:lang(fa-IR) .content_box ul,
+html:lang(fa-IR) .content_box ol,
+html:lang(fa-IR) .hero_content p,
+html:lang(fa-IR) .hero_content ul,
+html:lang(fa-IR) .hero_content ol,
+html:lang(fa-IR) .tab_wrapper .tab-content p,
+html:lang(fa-IR) .tab_wrapper .tab-content ul,
+html:lang(fa-IR) .tab_wrapper .tab-content ol {
+  font-size: 16px;
+}
+html:lang(ar-JO) .content_box ul, html:lang(ar-JO) .content_box ol,
+html:lang(ar-JO) .hero_content ul,
+html:lang(ar-JO) .hero_content ol,
+html:lang(ar-JO) .tab_wrapper .tab-content ul,
+html:lang(ar-JO) .tab_wrapper .tab-content ol,
+html:lang(fa-IR) .content_box ul,
+html:lang(fa-IR) .content_box ol,
+html:lang(fa-IR) .hero_content ul,
+html:lang(fa-IR) .hero_content ol,
+html:lang(fa-IR) .tab_wrapper .tab-content ul,
+html:lang(fa-IR) .tab_wrapper .tab-content ol {
+  padding: 0 18px 0 0;
+}
+html:lang(ar-JO) .carousel .carousel-indicators,
+html:lang(fa-IR) .carousel .carousel-indicators {
+  right: auto;
+  left: 20px;
+  direction: ltr;
+  margin-left: auto;
+}
+html:lang(ar-JO) .carousel .carousel-inner .item .carousel-caption,
+html:lang(fa-IR) .carousel .carousel-inner .item .carousel-caption {
+  left: 20%;
+  right: 0;
+  font-size: 18px;
+}
+html:lang(ar-JO) .tab_wrapper .nav-tabs,
+html:lang(fa-IR) .tab_wrapper .nav-tabs {
+  text-align: right;
+}
+html:lang(ar-JO) .tab_wrapper .nav-tabs li:first-child,
+html:lang(fa-IR) .tab_wrapper .nav-tabs li:first-child {
+  margin-right: -40px;
+}
+html:lang(ar-JO) .tab_wrapper .tab-content,
+html:lang(fa-IR) .tab_wrapper .tab-content {
+  direction: rtl;
+}
+html:lang(ar-JO) .gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control.right,
+html:lang(fa-IR) .gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control.right {
+  right: 0;
+  left: auto;
+}
+html:lang(ar-JO) .gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control.left,
+html:lang(fa-IR) .gallery .modal .modal-dialog .modal-content .modal-body .carousel .controls .carousel-control.left {
+  right: 50px;
+  left: auto;
+}
+html:lang(ar-JO) .modal .modal-dialog .modal-content .modal-header .close, html:lang(ar-JO) .modal .modal-dialog .modal-content .modal-body .close,
+html:lang(fa-IR) .modal .modal-dialog .modal-content .modal-header .close,
+html:lang(fa-IR) .modal .modal-dialog .modal-content .modal-body .close {
+  float: left;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 {
+  right: 41.66667%;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .row .col-sm-2,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .row .col-sm-2 {
+  padding-right: 15px;
+  padding-left: 0;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .checkbox label,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .checkbox label {
+  padding-right: 20px;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .radio label,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .radio label {
+  padding-right: 0;
+  margin-right: 20px;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .radio label input,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .radio label input {
+  margin-right: -20px;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .checkbox input[type="checkbox"],
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .checkbox-inline input[type="checkbox"],
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .checkbox input[type="checkbox"],
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .checkbox-inline input[type="checkbox"] {
+  margin-right: -20px;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 button.pull-right,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 button.pull-right {
+  float: left !important;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 button:after,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 button:after {
+  content: "\f104";
+  margin: 0 7px 0 0;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .radio-inline,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .radio-inline {
+  direction: ltr;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-5,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-5 {
+  left: 58.33333%;
+}
+html:lang(ar-JO) .form-horizontal .form-group .controls .date-picker .datepicker,
+html:lang(fa-IR) .form-horizontal .form-group .controls .date-picker .datepicker {
+  border-radius: 0 4px 4px 0;
+}
+html:lang(ar-JO) .form-horizontal .form-group .controls .date-picker .input-group-addon,
+html:lang(fa-IR) .form-horizontal .form-group .controls .date-picker .input-group-addon {
+  border-radius: 4px 0 0 4px;
+  border-left: 1px solid #ccc;
+  border-right: 0;
+}
+html:lang(ar-JO) .form-horizontal .form-group.has-error .controls .date-picker .input-group-addon,
+html:lang(fa-IR) .form-horizontal .form-group.has-error .controls .date-picker .input-group-addon {
+  border-left: 1px solid red;
+}
+html:lang(ar-JO) .form-horizontal .form-group.has-error .help-block,
+html:lang(fa-IR) .form-horizontal .form-group.has-error .help-block {
+  left: auto;
+  right: 15px;
+}
+html:lang(ar-JO) .form-horizontal .form-group.has-error .controls .date-picker .help-block,
+html:lang(fa-IR) .form-horizontal .form-group.has-error .controls .date-picker .help-block {
+  right: 0;
+}
+
+@media (max-width: 991px) {
+  html:lang(ar-JO) .form-horizontal .form-group .col-md-7, html:lang(fa-IR) .form-horizontal .form-group .col-md-7 {
+    right: auto;
+  }
+  html:lang(ar-JO) .form-horizontal .form-group .col-md-5, html:lang(fa-IR) .form-horizontal .form-group .col-md-5 {
+    left: auto;
+  }
+  html:lang(ar-JO) .form-horizontal .form-group .control-label, html:lang(fa-IR) .form-horizontal .form-group .control-label {
+    text-align: right;
+  }
 }

@@ -1,6 +1,7 @@
 /* ENQUIRY FORM COMPONENT */
 .form-horizontal{
 	.form-group{
+        font-size: 16px;
 		.control-label{ //col-md-5
 			label{
 				sup.required{
@@ -23,10 +24,11 @@
 			}
             label{
                 &.radio-inline{
+                    margin-right: 15px;
                     input{
-                        bottom: -7px;
                         margin-left: -20px;
                         width: auto;
+                        height: 15px;
                     }
                 }
             }
