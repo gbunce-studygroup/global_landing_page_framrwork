@@ -98,6 +98,31 @@ mark,
 .text-justify        { text-align: justify; }
 .text-nowrap         { white-space: nowrap; }
 
+// Alignment - responsive classes added form BTS 4
+@media (min-width: $screen-xs-min) {
+  .text-sm-left      { text-align: left !important; }
+  .text-sm-right     { text-align: right !important; }
+  .text-sm-center    { text-align: center !important; }
+}
+
+@media (min-width: $screen-sm-min) {
+  .text-md-left      { text-align: left !important; }
+  .text-md-right     { text-align: right !important; }
+  .text-md-center    { text-align: center !important; }
+}
+
+@media (min-width: $screen-md-min) {
+  .text-lg-left      { text-align: left !important; }
+  .text-lg-right     { text-align: right !important; }
+  .text-lg-center    { text-align: center !important; }
+}
+
+@media (min-width: $screen-lg-min) {
+  .text-xl-left      { text-align: left !important; }
+  .text-xl-right     { text-align: right !important; }
+  .text-xl-center    { text-align: center !important; }
+}
+
 // Transformation
 .text-lowercase      { text-transform: lowercase; }
 .text-uppercase      { text-transform: uppercase; }
