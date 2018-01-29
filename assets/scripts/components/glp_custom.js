@@ -68,3 +68,41 @@ $('html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .row, html:lang(fa-IR
 	var listItems = list.children('[class*=col]');
 	list.append(listItems.get().reverse());
 });
+
+// Normalize Carousel Heights of Bootstrap Carousel items.
+$.fn.carouselHeights = function(){
+    var items = $(this),
+        heights = [],
+        tallest;
+    var normalizeHeights = function(){
+        items.each(function(){
+            heights.push($(this).height()); 
+        });
+        tallest = Math.max.apply(null, heights);
+        items.each(function() {
+            $(this).css('min-height',tallest + 'px');
+        });
+    };
+    normalizeHeights();
+    $(window).on('resize orientationchange', function (){
+        tallest = 0;
+        heights.length = 0;
+        items.each(function(){
+            $(this).css('min-height','0');
+        }); 
+        normalizeHeights();
+    });
+};
+jQuery(function($){
+    $(window).on('load', function(){
+        $('.carousel .item').carouselHeights();
+    });
+});
+
+// Get carousel-caption colour and apply it to .item
+var carousel_caption = $('.carousel-caption')
+var bg = carousel_caption.css('background-color')
+var item = $('.item')
+item.css({
+  backgroundColor: bg
+})

@@ -51,6 +51,8 @@
 	.modal{
 		margin-top: 5vh;
 		.modal-dialog{
+			width: auto;
+			margin: 0 50px;
 			.modal-content{
 				.modal-header{
 					min-height: 50px;
@@ -61,19 +63,21 @@
 					.carousel{
 						.carousel-inner{
 							.item{
+								background: none !important;
 								img{
 									margin: 0 auto;
 									margin-bottom: 20px;
 								}
 								.carousel-caption{
-									position: relative;
-									text-shadow: none;
 									background: none;
-									bottom: 20px;
-									left: 25%;
-									right: 25%;
 									text-align: center;
-									top: auto;
+									left: auto;
+									right: auto;
+									position: relative;
+									margin: 15px 20% 0 20%;
+									text-shadow: none;
+									min-height: 300px;
+									width: auto;
 									h1, h2, h3, h4, h5, h6{
 										margin: 0;
 									}
@@ -85,15 +89,15 @@
 								display: inline-block;
 								background: none;
 								opacity: 1;
-								top: -65px;
-								width: auto;
+								top: 35%;
+								transform: translateY(-50%);
+								z-index: 1;
 								i{
 									font-size: 60px;
 									text-shadow: none;
-								}
-								&.right{
-									right: auto;
-									left: 50px;
+									position: relative;
+									top: 50%;
+									transform: translateY(-50%);
 								}
 								&:after{
 									display: none;
@@ -122,15 +126,18 @@
 				.modal-content{
 					.modal-body{
 						/* GALLERY CAROUSEL COMPONENT */
+						overflow: visible;
 						.carousel{
 							.carousel-inner{
 								.item{
 									.carousel-caption{
-										left: auto;
-										right: auto;
-										margin: 25px auto 0;
-										width: 100%;
+										min-height: 500px;
 									}
+								}
+							}
+							.controls{
+								.carousel-control{
+									top: 55%;
 								}
 							}
 						}
@@ -148,6 +155,29 @@
 			.col-md-6, .col-sm-6, .col-xs-6{
 				width: 50%;
 				padding: 7px;
+			}
+		}
+		.modal{
+			.modal-dialog{
+				.modal-content{
+					.modal-body{
+						/* GALLERY CAROUSEL COMPONENT */
+						.carousel{
+							.carousel-inner{
+								.item{
+									.carousel-caption{
+										padding: 20px 0;
+									}
+								}
+							}
+							.controls{
+								.carousel-control{
+									top: 38%;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
