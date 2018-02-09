@@ -9,7 +9,7 @@
     font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"]{
+[class^="icon_"], [class*=" icon_"]{
     font-family: 'chinese_icons' !important;
     speak: none;
     font-style: normal;
@@ -21,15 +21,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-linkedin:before{
+.icon_linkedin:before{
     content: "\e900";
 }
-.icon-wechat:before{
+.icon_wechat:before{
     content: "\e901";
 }
-.icon-weibo:before{
+.icon_weibo:before{
     content: "\e902";
 }
-.icon-youku:before{
+.icon_youku:before{
     content: "\e903";
 }
