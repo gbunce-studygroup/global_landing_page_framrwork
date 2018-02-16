@@ -11,6 +11,9 @@
 	li{ //.dropdown
 		list-style-type: none;
 		a{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+			color: #000 !important;
+			font-size: 14px !important;
 			img{
 				height: 15px;
 			    margin-right: 5px;
@@ -21,6 +24,7 @@
 			}
 			&:hover, &:active, &:focus{
 				text-decoration: none;
+				color: #000 !important;
 			}
 		}
 		ul{ //.dropdown-menu
@@ -48,17 +52,14 @@
 @media (max-width: $screen-sm-max){
 	.language_links_v2{ //ul
 		width: 750px;
-		top: -50px;
 	}
 }
 
 @media (max-width: $screen-xs-max){
 	.language_links_v2{ //ul
-
 		width: 100%;
-		padding: 0;
 		li{ //.dropdown
-			font-size: 13px;
+			font-size: 13px !important;
 			a{
 				img{
 					height: 13px;
@@ -67,7 +68,7 @@
 			ul{ //.dropdown-menu
 				li{
 					a{
-						font-size: 13px;
+						font-size: 13px !important;
 					}
 				}
 			}

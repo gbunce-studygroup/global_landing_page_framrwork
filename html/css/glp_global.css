@@ -9716,9 +9716,12 @@ button.close {
 
 #pageBody.language_select_added {
   margin-top: 40px;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 
+header .row.reset_position {
+  position: initial;
+}
 header .col-md-6.affix {
   z-index: 1001;
   top: 0;
@@ -10527,6 +10530,11 @@ header .content_box .button {
 .language_links_v2 li {
   list-style-type: none;
 }
+.language_links_v2 li a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #000 !important;
+  font-size: 14px !important;
+}
 .language_links_v2 li a img {
   height: 15px;
   margin-right: 5px;
@@ -10537,6 +10545,7 @@ header .content_box .button {
 }
 .language_links_v2 li a:hover, .language_links_v2 li a:active, .language_links_v2 li a:focus {
   text-decoration: none;
+  color: #000 !important;
 }
 .language_links_v2 li ul {
   display: none;
@@ -10555,22 +10564,20 @@ header .content_box .button {
 @media (max-width: 991px) {
   .language_links_v2 {
     width: 750px;
-    top: -50px;
   }
 }
 @media (max-width: 767px) {
   .language_links_v2 {
     width: 100%;
-    padding: 0;
   }
   .language_links_v2 li {
-    font-size: 13px;
+    font-size: 13px !important;
   }
   .language_links_v2 li a img {
     height: 13px;
   }
   .language_links_v2 li ul li a {
-    font-size: 13px;
+    font-size: 13px !important;
   }
 }
 /* MAIN LOGO COMPONENT */
