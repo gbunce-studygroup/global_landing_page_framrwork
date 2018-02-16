@@ -111,4 +111,5 @@ item.css({
 if ($('header .language_links_v2').length > 0) { 
     $('#pageBody').addClass('language_select_added');
     $('.language_links_v2').parent().addClass('reset_position');
+    $('header .row').addClass('reset_position');
 }
