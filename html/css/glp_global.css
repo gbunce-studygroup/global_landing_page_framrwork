@@ -9714,6 +9714,11 @@ button.close {
   content: "\e903";
 }
 
+#pageBody.language_select_added {
+  margin-top: 40px;
+  border-bottom: 1px solid #eee;
+}
+
 header .col-md-6.affix {
   z-index: 1001;
   top: 0;
@@ -9723,6 +9728,12 @@ header .col-md-6.affix {
 }
 header .col-md-6.affix .language_links_v2 {
   display: none;
+}
+header .col-md-6.reset_position {
+  position: initial;
+}
+header .col-md-6.reset_position.affix {
+  position: fixed;
 }
 
 .row_flex {
@@ -10504,14 +10515,20 @@ header .content_box .button {
 }
 /* LANGUAGE LINKS COMPONENT */
 .language_links_v2 {
-  padding: 0 10px 0 0;
+  padding: 0 15px 0 0;
   text-align: right;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 1170px;
 }
 .language_links_v2 li {
   list-style-type: none;
 }
 .language_links_v2 li a img {
-  height: 18px;
+  height: 15px;
   margin-right: 5px;
   padding: 0;
 }
@@ -10530,31 +10547,30 @@ header .content_box .button {
   padding: 3px 10px;
 }
 
+@media (max-width: 1199px) {
+  .language_links_v2 {
+    width: 970px;
+  }
+}
 @media (max-width: 991px) {
   .language_links_v2 {
-    position: absolute;
-    top: 0;
-    right: 0;
+    width: 750px;
+    top: -50px;
   }
 }
 @media (max-width: 767px) {
   .language_links_v2 {
-    margin: -5px 0 0 0;
+    width: 100%;
     padding: 0;
   }
-  .language_links_v2 li a {
-    font-size: 0;
+  .language_links_v2 li {
+    font-size: 13px;
   }
   .language_links_v2 li a img {
-    margin-bottom: 3px;
-    margin-right: 0;
-    height: 14px;
+    height: 13px;
   }
   .language_links_v2 li ul li a {
     font-size: 13px;
-  }
-  .language_links_v2 li ul li a img {
-    margin-right: 7px;
   }
 }
 /* MAIN LOGO COMPONENT */

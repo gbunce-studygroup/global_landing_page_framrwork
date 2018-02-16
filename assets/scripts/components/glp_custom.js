@@ -106,3 +106,9 @@ var item = $('.item')
 item.css({
   backgroundColor: bg
 })
+
+// Detect language select in the header and add class to body if it is present
+if ($('header .language_links_v2').length > 0) { 
+    $('#pageBody').addClass('language_select_added');
+    $('.language_links_v2').parent().addClass('reset_position');
+}

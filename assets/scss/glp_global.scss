@@ -2,6 +2,13 @@
 @import "font-awesome"; 			// _font-awesome.scss
 @import "chinese_icons"; 			// _chinese_icons.scss
 
+#pageBody{
+	&.language_select_added{
+		margin-top: 40px;
+		border-bottom: 1px solid #eee;
+	}
+}
+
 header{
 	.col-md-6{
 		&.affix{
@@ -12,6 +19,12 @@ header{
 			width: 100%;
 			.language_links_v2{
 				display: none;
+			}
+		}
+		&.reset_position{
+			position: initial;
+			&.affix{
+				position: fixed;
 			}
 		}
 	}
