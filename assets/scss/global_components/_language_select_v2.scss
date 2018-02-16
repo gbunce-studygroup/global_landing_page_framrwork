@@ -1,12 +1,18 @@
 /* LANGUAGE LINKS COMPONENT */
 .language_links_v2{ //ul
-	padding: 0 10px 0 0;
+	padding: 0 15px 0 0;
 	text-align: right;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 1170px;
 	li{ //.dropdown
 		list-style-type: none;
 		a{
 			img{
-				height: 18px;
+				height: 15px;
 			    margin-right: 5px;
 				padding: 0;
 			}
@@ -34,36 +40,34 @@
 }
 
 @media (max-width: $screen-md-max){
+	.language_links_v2{ //ul
+		width: 970px;
+	}
 }
 
 @media (max-width: $screen-sm-max){
 	.language_links_v2{ //ul
-		position: absolute;
-		top: 0;
-		right: 0;
+		width: 750px;
+		top: -50px;
 	}
 }
 
 @media (max-width: $screen-xs-max){
 	.language_links_v2{ //ul
-		margin: -5px 0 0 0;
+
+		width: 100%;
 		padding: 0;
 		li{ //.dropdown
+			font-size: 13px;
 			a{
-				font-size: 0;
 				img{
-				    margin-bottom: 3px;
-				    margin-right: 0;
-					height: 14px;
+					height: 13px;
 				}
 			}
 			ul{ //.dropdown-menu
 				li{
 					a{
 						font-size: 13px;
-						img{
-							margin-right: 7px;
-						}
 					}
 				}
 			}
