@@ -9714,6 +9714,16 @@ button.close {
   content: "\e903";
 }
 
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+body.modal-open #modelForm {
+  z-index: 9999;
+}
+
 #pageBody.language_select_added {
   margin-top: 40px;
   border-top: 1px solid #eee;
