@@ -2,6 +2,19 @@
 @import "font-awesome"; 			// _font-awesome.scss
 @import "chinese_icons"; 			// _chinese_icons.scss
 
+// fix for modal forms in ios
+body{
+	&.modal-open{
+		overflow: hidden;
+		position: fixed;
+		left: 0;
+		right: 0;
+		#modelForm{
+			z-index: 9999;
+		}
+	}
+}
+
 #pageBody{
 	&.language_select_added{
 		margin-top: 40px;
