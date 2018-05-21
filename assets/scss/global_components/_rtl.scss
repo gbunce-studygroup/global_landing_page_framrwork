@@ -209,6 +209,16 @@ html:lang(fa-IR){
         right: 0;
     }
 
+    .cookie-bar{
+        .cookie-inner{ // row
+            .col-a, .col-b{
+                float: right;
+            }
+            .col-b{
+                text-align: left;
+            }
+        }
+    }
 }
 
 @media (min-width: $screen-lg-min){
@@ -231,6 +241,13 @@ html:lang(fa-IR){
                 }
                 .control-label{ //col-md-5
                     text-align: right;
+                }
+            }
+        }
+        .cookie-bar{
+            .cookie-inner{ // row
+                .col-b{
+                    text-align: center;
                 }
             }
         }

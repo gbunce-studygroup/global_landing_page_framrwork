@@ -10994,6 +10994,15 @@ html:lang(ar-JO) .form-horizontal .form-group.has-error .controls .date-picker .
 html:lang(fa-IR) .form-horizontal .form-group.has-error .controls .date-picker .help-block {
   right: 0;
 }
+html:lang(ar-JO) .cookie-bar .cookie-inner .col-a, html:lang(ar-JO) .cookie-bar .cookie-inner .col-b,
+html:lang(fa-IR) .cookie-bar .cookie-inner .col-a,
+html:lang(fa-IR) .cookie-bar .cookie-inner .col-b {
+  float: right;
+}
+html:lang(ar-JO) .cookie-bar .cookie-inner .col-b,
+html:lang(fa-IR) .cookie-bar .cookie-inner .col-b {
+  text-align: left;
+}
 
 @media (max-width: 991px) {
   html:lang(ar-JO) .form-horizontal .form-group .col-md-7, html:lang(fa-IR) .form-horizontal .form-group .col-md-7 {
@@ -11004,5 +11013,8 @@ html:lang(fa-IR) .form-horizontal .form-group.has-error .controls .date-picker .
   }
   html:lang(ar-JO) .form-horizontal .form-group .control-label, html:lang(fa-IR) .form-horizontal .form-group .control-label {
     text-align: right;
+  }
+  html:lang(ar-JO) .cookie-bar .cookie-inner .col-b, html:lang(fa-IR) .cookie-bar .cookie-inner .col-b {
+    text-align: center;
   }
 }
