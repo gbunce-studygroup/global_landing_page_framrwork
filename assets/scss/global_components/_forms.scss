@@ -25,6 +25,9 @@
             label{
                 &.radio-inline{
                     margin-right: 15px;
+                    + .radio-inline{
+                        margin-left: 0;
+                    }
                     input{
                         margin-left: -20px;
                         width: auto;
@@ -229,6 +232,13 @@
                     }
                     .col-sm-10{
                         width: 75.33337%;
+                    }
+                }
+            }
+            .controls{ //col-md-7
+                label{
+                    &.radio-inline{
+                        display: block;
                     }
                 }
             }
