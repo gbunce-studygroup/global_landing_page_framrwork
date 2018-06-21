@@ -178,8 +178,18 @@ html:lang(fa-IR){
                         margin: 0 7px 0 0;
                     }
                 }
-                .radio-inline{
-                    direction: ltr;
+                &.controls{ //col-md-7
+                    label{
+                        &.radio-inline{
+                            direction: ltr;
+                            margin-left: 15px;
+                            margin-right: 0;
+                            text-align: right;
+                            .form-control{
+                                display: inline-block;
+                            }
+                        }
+                    }
                 }
             }
             .col-md-5{
@@ -187,6 +197,7 @@ html:lang(fa-IR){
             }
         }
     }
+
     // date picker
     .form-horizontal .form-group .controls .date-picker .datepicker{
         border-radius: 0 4px 4px 0;

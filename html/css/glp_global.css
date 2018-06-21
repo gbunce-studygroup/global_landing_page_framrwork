@@ -10100,6 +10100,9 @@ header .content_box .button {
 .form-horizontal .form-group .controls label.radio-inline {
   margin-right: 15px;
 }
+.form-horizontal .form-group .controls label.radio-inline + .radio-inline {
+  margin-left: 0;
+}
 .form-horizontal .form-group .controls label.radio-inline input {
   margin-left: -20px;
   width: auto;
@@ -10284,6 +10287,9 @@ header .content_box .button {
   }
   .form-horizontal .form-group .col-md-7 .row .col-sm-10 {
     width: 75.33337%;
+  }
+  .form-horizontal .form-group .controls label.radio-inline {
+    display: block;
   }
 }
 /* GALLERY COMPONENT */
@@ -10963,9 +10969,16 @@ html:lang(fa-IR) .form-horizontal .form-group .col-md-7 button:after {
   content: "\f104";
   margin: 0 7px 0 0;
 }
-html:lang(ar-JO) .form-horizontal .form-group .col-md-7 .radio-inline,
-html:lang(fa-IR) .form-horizontal .form-group .col-md-7 .radio-inline {
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7.controls label.radio-inline,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7.controls label.radio-inline {
   direction: ltr;
+  margin-left: 15px;
+  margin-right: 0;
+  text-align: right;
+}
+html:lang(ar-JO) .form-horizontal .form-group .col-md-7.controls label.radio-inline .form-control,
+html:lang(fa-IR) .form-horizontal .form-group .col-md-7.controls label.radio-inline .form-control {
+  display: inline-block;
 }
 html:lang(ar-JO) .form-horizontal .form-group .col-md-5,
 html:lang(fa-IR) .form-horizontal .form-group .col-md-5 {
