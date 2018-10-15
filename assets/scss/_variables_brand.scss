@@ -223,8 +223,8 @@ $tab_content_padding:							20px 15px 10px 15px !default;
 // Testimonial
 $testimonial_image_margin:						0 0 20px 0 !default;
 $testimonial_background:						#fff !default;
-$testimonial_padding:							10px !default;
-$testimonial_text_align:						center !default;
+$testimonial_padding:							30px !default;
+$testimonial_text_align:						accordion_text_colour_open !default;
 $testimonial_text_colour:						$main_colour !default;
 $testimonial_text_size:							20px !default;
 $testimonial_text_line_height:					30px !default;
@@ -234,8 +234,8 @@ $video_text_align:								center !default;
 
 // Widget
 $widget_background:								#eee !default;
-$widget_padding:								15px !default;
-$widget_text_align:								center !default;
+$widget_padding:								30px !default;
+$widget_text_align:								auto !default;
 $widget_title_colour:							#000 !default;
 $widget_text_colour:							#000 !default;
 $widget_border_property:						border !default;
@@ -256,7 +256,7 @@ $pullout_background:							$main_colour !default;
 $pullout_title_colour:							#fff !default;
 $pullout_text_colour:							#fff !default;
 $pullout_padding:								30px !default;
-$pullout_text_align:							left !default;
+$pullout_text_align:							auto !default;
 $pullout_border_property:						border !default;
 $pullout_border:								2px solid #fff !default;
 $pullout_border_radius:							10px !default;
